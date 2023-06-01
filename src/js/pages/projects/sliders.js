@@ -11,6 +11,27 @@ function initYearSelectSlider() {
 	});
 }
 function initGalleryThumbsSlider() {
+	const openGalleryByClick =  (swiper, event) => {
+		if (window.innerWidth >= 993) return;
+		const clickCursorPosition = {
+			x: event.clientX,
+			y: event.clientY,
+		};
+		const lastTouchmovePosition = { ...clickCursorPosition };
+		const moveHandler = (event) => {
+				console.log("moveHandler", event);
+			lastTouchmovePosition.x = event.clientX;
+			lastTouchmovePosition.y = event.clientY;
+		};
+		document.addEventListener("pointermove", moveHandler);
+		setTimeout(() => {
+			document.removeEventListener("pointermove", moveHandler);
+			if (Math.abs(clickCursorPosition.x - lastTouchmovePosition.x) <= 5 &&
+					Math.abs(clickCursorPosition.y - lastTouchmovePosition.y) <= 5) {
+				window.drawers.open("gallery", event.target);
+			}
+		}, 100);
+	}
 	return new Swiper('.content__gallery-thumbs', {
 		modules: [Thumbs],
 		resizeObserver: true,
@@ -18,11 +39,8 @@ function initGalleryThumbsSlider() {
 		spaceBetween: 0,
 		allowTouchMove: false,
 		on: {
-			"click": (swiper, event) => {
-				if (window.innerWidth < 993) {
-					window.drawers.open("gallery", event.target);	
-				}
-			}
+			"click": openGalleryByClick,
+			"touchStart": openGalleryByClick,
 		}
 	});
 }

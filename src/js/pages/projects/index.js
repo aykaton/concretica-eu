@@ -3,9 +3,6 @@ import { initOptionsListSummary } from "../../shared/initOptionsListSummary.js";
 
 window.addEventListener("DOMContentLoaded", onLoaded);
 
-function error(msg) {
-	alert("В приложении произошла ошибка: " + msg);
-}
 const onShapeChange = (() => {
 	const labelElem = document.querySelector("#selected-shape-name");
 	const buttonElem = document.querySelector("#desc-shape-select");

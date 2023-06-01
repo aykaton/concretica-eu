@@ -40,8 +40,6 @@
 			line-height: 21px;
 		}
 	}
-	&__order-select {
-	}
 	&__body {
 		margin-bottom: rem(75);
 		@media screen and (min-width: $mobileSmall) and (max-width: $design) {
@@ -51,7 +49,11 @@
 			margin-bottom: rem(50);
 		}
 	}
-	&__no-products {
+	&__loading-screen {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		min-height: rem(400);
 	}
 	&__no-products-text {
 		font-size: rem(38);
@@ -66,10 +68,7 @@
 			line-height: rem(28.13);
 		}
 	}
-	&__footer {
-	}
-	&__pagination {
-	}
+
 }
 .applied-filters {
 	&__list {

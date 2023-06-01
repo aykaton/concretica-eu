@@ -1,0 +1,1871 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Store</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel='stylesheet' href='css/common.min.css?_v=20230601122951'>
+	<link rel='stylesheet' href='css/store.min.css?_v=20230601122951'>
+	<!-- <link rel="stylesheet" href="css/swiper-bundle.min.css?_v=20230601122951"> -->
+
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		@import url(https://fonts.googleapis.com/css?family=Roboto:300,regular,500,);
+		@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,regular,600,700);
+	</style>
+	<script>
+		window.onerror = function(message, url, line, col, errorObj) {
+			alert(`${message}\n${url}, ${line}:${col}`);
+		};
+	</script>
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header header_right">
+			<div class="header__container">
+				<div class="header__logo-wrap">
+					<figure class="header__logo logo">
+						<a href="/"><img src="img/logo.svg" alt="Logo"></a>
+					</figure>
+				</div>
+				<div class="header__contacts-btn-area" data-portal-dest="contacts-btn"></div>
+				<div class="header__cart-area" data-portal-dest="shop-cart"></div>
+				<div class="header__menu-area" data-portal-dest="main-menu">
+				</div>
+			</div>
+		</header>
+		<div class="inner">
+			<main class="page">
+				<section class="section-slider swiper">
+					<div class="swiper-wrapper section-slider__wrapper">
+						<div class="swiper-slide page__gallery-area">
+							<section class="main-gallery">
+								<div class="main-gallery__slider swiper">
+									<div class="main-gallery__prev-btn swiper-btn swiper-btn_prev">
+										<svg viewbox="0 0 22 17">
+											<use xlink:href='img/icons/icons.svg#nav-arrow-left'></use>
+										</svg>
+									</div>
+									<div class="main-gallery__next-btn swiper-btn swiper-btn_next">
+										<svg viewbox="0 0 22 17">
+											<use xlink:href='img/icons/icons.svg#nav-arrow-left'></use>
+										</svg>
+									</div>
+									<div id="gallery-wrap" class="swiper-wrapper">
+										<a href="." class="swiper-slide main-gallery__slide">
+											<img src="img/store/001.jpg" alt="where-to-buy/001.jpg" loading="lazy">
+											<div class="swiper-lazy-preloader"></div>
+										</a>
+									</div>
+									<div class="main-gallery__paggination"></div>
+								</div>
+								<div class="main-gallery__filters desc-filters">
+									<div class="desc-filters__panel">
+										<div class="desc-filters__inner" data-portal-src="filters" data-portal-media="(max-width: 992px)">
+											<form action="#" id="products-filter-form" name="products-filter" class="products-filter-form">
+												<div id="filters-search" class="search-control products-filter-form__search">
+													<div class="search-control__wrapper" data-focus-indicator>
+														<input type="text" name="search" class="search-control__input" placeholder="Поиск" data-focus-receiver>
+														<!-- <button type="button" class="search-control__reset-btn">
+								<svg class="search-control__reset-icon" viewbox="0 0 7 7">
+									<use xlink:href='img/icons/icons.svg#close_micro_icon'></use>
+								</svg>
+							</button>
+							<div class="search-control__separator"></div> -->
+														<button type="button" class="search-control__search-btn">
+															<svg class="search-control__search-icon" viewbox="0 0 16.25 16.79">
+																<use xlink:href='img/icons/icons.svg#magnifier'></use>
+															</svg>
+														</button>
+													</div>
+													<div class="search-control__predictions">
+													</div>
+												</div>
+												<div class="filters-group mb-30">
+													<div class="filters-group__header">
+														<h3 class="filters-group__name">
+															ФОРМА
+														</h3>
+													</div>
+													<ul class="filter-options-list filter-options-list_vertical mb-20">
+														<li class="filter-options-list__option disclosure" data-check-indicator>
+															<label class="cm-checkbox">
+																<input type="checkbox" form="products-filter-form" name="shape-group-round" class="cm-checkbox__input" data-check-receiver>
+																<span class="cm-checkbox__body"></span>
+																<span class="cm-checkbox__label">Круглые</span>
+															</label>
+															<div class="disclosure__body">
+																<div class="value-multi-input">
+																	<div class="value-multi-input__title">
+																		Диаметр, см (D)
+																	</div>
+																	<div class="value-multi-input__range-select double-range-select">
+																		<input class="double-range-select__range-from" name="__diameter-from" type="range" min="20" max="120" value="30">
+																		<input class="double-range-select__range-to" name="__diameter-to" type="range" min="20" max="120" value="60">
+																	</div>
+																	<div class="value-multi-input__direct-inputs">
+																		<div class="value-multi-input__direct-input-field">
+																			<div class="value-multi-input__direct-input-inner" data-focus-indicator>
+																				<span class="value-multi-input__direct-input-caption">от&nbsp;</span>
+																				<input class="value-multi-input__value-from" name="diameter-from" type="number" value="50" data-focus-receiver>
+																			</div>
+																		</div>
+																		<div class="value-multi-input__direct-input-field">
+																			<div class="value-multi-input__direct-input-inner" data-focus-indicator>
+																				<span class="value-multi-input__direct-input-caption">до&nbsp;</span>
+																				<input class="value-multi-input__value-to" name="diameter-to" type="number" value="70" data-focus-receiver>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+																<div class="value-multi-input">
+																	<div class="value-multi-input__title">
+																		Высота, см (H)
+																	</div>
+																	<div class="value-multi-input__range-select double-range-select">
+																		<input class="double-range-select__range-from" name="__round-height-from" type="range" min="15" max="150" value="50">
+																		<input class="double-range-select__range-to" name="__round-height-to" type="range" min="15" max="150" value="70">
+																	</div>
+																	<div class="value-multi-input__direct-inputs">
+																		<div class="value-multi-input__direct-input-field">
+																			<div class="value-multi-input__direct-input-inner" data-focus-indicator>
+																				<span class="value-multi-input__direct-input-caption">от&nbsp;</span>
+																				<input class="value-multi-input__value-from" name="round-height-from" type="number" value="50" data-focus-receiver>
+																			</div>
+																		</div>
+																		<div class="value-multi-input__direct-input-field">
+																			<div class="value-multi-input__direct-input-inner" data-focus-indicator>
+																				<span class="value-multi-input__direct-input-caption">до&nbsp;</span>
+																				<input class="value-multi-input__value-to" name="round-height-to" type="number" value="70" data-focus-receiver>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</li>
+														<li class="filter-options-list__option disclosure" data-check-indicator>
+															<label class="cm-checkbox">
+																<input type="checkbox" form="products-filter-form" name="shape-group-rectangular" class="cm-checkbox__input" data-check-receiver>
+																<span class="cm-checkbox__body"></span>
+																<span class="cm-checkbox__label">Прямоугольные</span>
+															</label>
+															<div class="disclosure__body">
+																<div class="value-multi-input">
+																	<div class="value-multi-input__title">
+																		Длина, см (L)
+																	</div>
+																	<div class="value-multi-input__range-select double-range-select">
+																		<input class="double-range-select__range-from" name="__rectangular-length-from" type="range" min="20" max="120" value="20">
+																		<input class="double-range-select__range-to" name="__rectangular-length-to" type="range" min="20" max="120" value="90">
+																	</div>
+																	<div class="value-multi-input__direct-inputs">
+																		<div class="value-multi-input__direct-input-field">
+																			<div class="value-multi-input__direct-input-inner" data-focus-indicator>
+																				<span class="value-multi-input__direct-input-caption">от&nbsp;</span>
+																				<input class="value-multi-input__value-from" name="rectangular-length-from" type="number" value="20" data-focus-receiver>
+																			</div>
+																		</div>
+																		<div class="value-multi-input__direct-input-field">
+																			<div class="value-multi-input__direct-input-inner" data-focus-indicator>
+																				<span class="value-multi-input__direct-input-caption">до&nbsp;</span>
+																				<input class="value-multi-input__value-to" name="rectangular-length-to" type="number" value="90" data-focus-receiver>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+																<div class="value-multi-input">
+																	<div class="value-multi-input__title">
+																		Ширина, см (W)
+																	</div>
+																	<div class="value-multi-input__range-select double-range-select">
+																		<input class="double-range-select__range-from" name="__rectangular-width-from" type="range" min="20" max="120" value="20">
+																		<input class="double-range-select__range-to" name="__rectangular-width-to" type="range" min="20" max="120" value="90">
+																	</div>
+																	<div class="value-multi-input__direct-inputs">
+																		<div class="value-multi-input__direct-input-field">
+																			<div class="value-multi-input__direct-input-inner" data-focus-indicator>
+																				<span class="value-multi-input__direct-input-caption">от&nbsp;</span>
+																				<input class="value-multi-input__value-from" name="rectangular-width-from" type="number" value="20" data-focus-receiver>
+																			</div>
+																		</div>
+																		<div class="value-multi-input__direct-input-field">
+																			<div class="value-multi-input__direct-input-inner" data-focus-indicator>
+																				<span class="value-multi-input__direct-input-caption">до&nbsp;</span>
+																				<input class="value-multi-input__value-to" name="rectangular-width-to" type="number" value="90" data-focus-receiver>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+																<div class="value-multi-input">
+																	<div class="value-multi-input__title">
+																		Высота, см (H)
+																	</div>
+																	<div class="value-multi-input__range-select double-range-select">
+																		<input class="double-range-select__range-from" name="__rectangular-height-from" type="range" min="15" max="150" value="20">
+																		<input class="double-range-select__range-to" name="__rectangular-height-to" type="range" min="15" max="150" value="90">
+																	</div>
+																	<div class="value-multi-input__direct-inputs">
+																		<div class="value-multi-input__direct-input-field">
+																			<div class="value-multi-input__direct-input-inner" data-focus-indicator>
+																				<span class="value-multi-input__direct-input-caption">от&nbsp;</span>
+																				<input class="value-multi-input__value-from" name="rectangular-height-from" type="number" value="20" data-focus-receiver>
+																			</div>
+																		</div>
+																		<div class="value-multi-input__direct-input-field">
+																			<div class="value-multi-input__direct-input-inner" data-focus-indicator>
+																				<span class="value-multi-input__direct-input-caption">до&nbsp;</span>
+																				<input class="value-multi-input__value-to" name="rectangular-height-to" type="number" value="90" data-focus-receiver>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</li>
+													</ul>
+													<button type="button" data-drawer-open="shapes" class="more-filters-btn">
+														<span class="more-filters-btn__caption">выбрать форму</span>
+														<svg class="more-filters-btn__icon" viewbox="0 0 13 6">
+															<use xlink:href='img/icons/icons.svg#small-arrow-down'></use>
+														</svg>
+													</button>
+													<div id="selected-shape-name" class="filters__label"></div>
+												</div>
+												<div class="filters-group mb-30">
+													<div class="filters-group__header">
+														<h3 class="filters-group__name">
+															Фактура
+														</h3>
+													</div>
+													<div class="mb-20">
+														<ul id="texture-clones-list" class="filter-options-list filter-options-list_horizontal">
+															<li class="filter-options-list__option">
+																<label class="filters-texture-option" style="--color: #2F80ED;">
+																	<input type="radio" form="products-filter-form" name="texture-clone" class="filters-texture-option__input" value="Cobalt Blue">
+																	<span class="filters-texture-option__body"></span>
+																</label>
+															</li>
+															<li class="filter-options-list__option">
+																<label class="filters-texture-option" style="--color: #F2D3A4;">
+																	<input type="radio" form="products-filter-form" name="texture-clone" class="filters-texture-option__input" value="Lemon Clay">
+																	<span class="filters-texture-option__body"></span>
+																</label>
+															</li>
+															<li class="filter-options-list__option">
+																<label class="filters-texture-option" style="--color: #1E1E1E;">
+																	<input type="radio" form="products-filter-form" name="texture-clone" class="filters-texture-option__input" value="Slanets">
+																	<span class="filters-texture-option__body"></span>
+																</label>
+															</li>
+															<li class="filter-options-list__option">
+																<label class="filters-texture-option" style="--color: #A94223;">
+																	<input type="radio" form="products-filter-form" name="texture-clone" class="filters-texture-option__input" value="Terra-cotta">
+																	<span class="filters-texture-option__body"></span>
+																</label>
+															</li>
+															<li class="filter-options-list__option">
+																<label class="filters-texture-option" style="--color: #766947;">
+																	<input type="radio" form="products-filter-form" name="texture-clone" class="filters-texture-option__input" value="Olive">
+																	<span class="filters-texture-option__body"></span>
+																</label>
+															</li>
+															<li class="filter-options-list__option">
+																<label class="filters-texture-option" style="--color: #E38156;">
+																	<input type="radio" form="products-filter-form" name="texture-clone" class="filters-texture-option__input" value="Red Clay">
+																	<span class="filters-texture-option__body"></span>
+																</label>
+															</li>
+														</ul>
+													</div>
+													<button type="button" data-drawer-open="textures" class="more-filters-btn">
+														<span class="more-filters-btn__caption">показать еще</span>
+														<svg class="more-filters-btn__icon" viewbox="0 0 13 6">
+															<use xlink:href='img/icons/icons.svg#small-arrow-down'></use>
+														</svg>
+													</button>
+													<div id="selected-texture-name" class="filters__label"></div>
+												</div>
+												<div class="filters-group filters-group_mob-horizontal mb-30">
+													<div class="filters-group__header filters-group__header_mob-ends-with-colon">
+														<h3 class="filters-group__name">Тип</h3>
+													</div>
+													<div class="filters-group__body">
+														<button type="button" class="store-filter__option-select-btn filter-option-select-btn" data-options-indicator="type" data-drawer-open="type">
+															<span class="filter-option-select-btn__caption">Все</span>
+														</button>
+														<div data-portal-src="type" data-portal-media="(max-width: 768px)">
+															<ul class="filter-options-list filter-options-list_vertical" data-options-list="type">
+																<li class="filter-options-list__option">
+																	<label class="cm-checkbox">
+																		<input type="checkbox" form="products-filter-form" name="type--for-desk" class="cm-checkbox__input">
+																		<span class="cm-checkbox__body"></span>
+																		<span class="cm-checkbox__label">Настольные</span>
+																	</label>
+																</li>
+																<li class="filter-options-list__option">
+																	<label class="cm-checkbox">
+																		<input type="checkbox" form="products-filter-form" name="type--for-floor" class="cm-checkbox__input">
+																		<span class="cm-checkbox__body"></span>
+																		<span class="cm-checkbox__label">Напольные</span>
+																	</label>
+																</li>
+																<li class="filter-options-list__option">
+																	<label class="cm-checkbox">
+																		<input type="checkbox" form="products-filter-form" name="type--for-hanging" class="cm-checkbox__input">
+																		<span class="cm-checkbox__body"></span>
+																		<span class="cm-checkbox__label">Подвесные</span>
+																	</label>
+																</li>
+																<li class="filter-options-list__option">
+																	<label class="cm-checkbox">
+																		<input type="checkbox" form="products-filter-form" name="type--for-balcony" class="cm-checkbox__input">
+																		<span class="cm-checkbox__body"></span>
+																		<span class="cm-checkbox__label">Балконеры</span>
+																	</label>
+																</li>
+															</ul>
+														</div>
+													</div>
+												</div>
+												<div class="filters-group filters-group_mob-horizontal mb-30">
+													<div class="filters-group__header filters-group__header_mob-ends-with-colon">
+														<h3 class="filters-group__name">Размещение</h3>
+													</div>
+													<div class="filters-group__body">
+														<button type="button" class="store-filter__option-select-btn filter-option-select-btn" data-options-indicator="placing" data-drawer-open="placing">
+															<span class="filter-option-select-btn__caption">Все</span>
+														</button>
+														<div data-portal-src="placing" data-portal-media="(max-width: 768px)">
+															<ul class="filter-options-list filter-options-list_vertical" data-options-list="placing">
+																<li class="filter-options-list__option">
+																	<label class="cm-checkbox">
+																		<input type="checkbox" form="products-filter-form" name="placing--outside" class="cm-checkbox__input">
+																		<span class="cm-checkbox__body"></span>
+																		<span class="cm-checkbox__label">Для улицы</span>
+																	</label>
+																</li>
+																<li class="filter-options-list__option">
+																	<label class="cm-checkbox">
+																		<input type="checkbox" form="products-filter-form" name="placing--inside" class="cm-checkbox__input">
+																		<span class="cm-checkbox__body"></span>
+																		<span class="cm-checkbox__label">Для помещения</span>
+																	</label>
+																</li>
+															</ul>
+														</div>
+													</div>
+												</div>
+												<div class="filters-group mb-30">
+													<div class="filters-group__header">
+														<h3 class="filters-group__name">
+															Цена
+														</h3>
+													</div>
+													<div class="value-multi-input">
+														<div class="value-multi-input__range-select double-range-select">
+															<input class="double-range-select__range-from" name="__price-from" type="range" min="3000" max="120000" value="4500">
+															<input class="double-range-select__range-to" name="__price-to" type="range" min="3000" max="120000" value="25000">
+														</div>
+														<div class="value-multi-input__direct-inputs">
+															<div class="value-multi-input__direct-input-field">
+																<div class="value-multi-input__direct-input-inner" data-focus-indicator>
+																	<span class="value-multi-input__direct-input-caption">от&nbsp;</span>
+																	<input class="value-multi-input__value-from" name="price-from" type="number" value="4500" data-focus-receiver>
+																</div>
+															</div>
+															<div class="value-multi-input__direct-input-field">
+																<div class="value-multi-input__direct-input-inner" data-focus-indicator>
+																	<span class="value-multi-input__direct-input-caption">до&nbsp;</span>
+																	<input class="value-multi-input__value-to" name="price-to" type="number" value="25000" data-focus-receiver>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="filters-group filters-group_horizontal filters-group_horizontal-space-between">
+													<div class="filters-group__header">
+														<h3 class="filters-group__name">
+															В наличии
+														</h3>
+													</div>
+													<div class="filters-group__body">
+														<label class="sliding-checkbox" data-check-indicator>
+															<input type="checkbox" name="availability" class="sliding-checkbox__input" checked data-check-receiver>
+														</label>
+													</div>
+												</div>
+											</form>
+										</div>
+									</div>
+									<div class="desc-filters__switch hoverable">
+										Фильтры
+									</div>
+								</div>
+							</section>
+						</div>
+						<div class="swiper-slide page__info-area">
+							<section class="content store">
+								<div class="content__container store__container">
+									<div class="content__wrap store__wrap">
+										<!-- <div class="store__breadcrumbs breadcrumbs">
+				<div class="breadcrumbs__root">STORE</div>
+			</div> -->
+										<h1 class="store__title content__title section-title">ONLINE STORE</h1>
+										<div class="store__body">
+											<div class="store__catalogue catalogue">
+												<div class="catalogue__header">
+													<div class="catalogue__toolbar">
+														<h4 class="catalogue__products-count">
+															8 товаров
+														</h4>
+														<div class="catalogue__order-select">
+															<div class="option-select">
+																<div class="option-select__field">По популярности</div>
+																<div class="option-select__options">
+																	<div class="option-select__options-wrapper">
+																		<ul class="option-select__options-list">
+																			<li class="option-select__option">
+																				<label class="option-select__option-label">
+																					<input form="products-filter-form" name="order" type="radio" class="option-select__option-radio" value="by-rate" aria-hidden="true">
+																					<span class="option-select__option-name">По популярности</span>
+																					<span class="option-select__option-indicator">
+																						<span></span>
+																					</span>
+																				</label>
+																			</li>
+																			<li class="option-select__option">
+																				<label class="option-select__option-label">
+																					<input form="products-filter-form" name="order" type="radio" class="option-select__option-radio" value="discounted" aria-hidden="true">
+																					<span class="option-select__option-name">Со скидкой</span>
+																					<span class="option-select__option-indicator">
+																						<span></span>
+																					</span>
+																				</label>
+																			</li>
+																			<li class="option-select__option">
+																				<label class="option-select__option-label">
+																					<input form="products-filter-form" name="order" type="radio" class="option-select__option-radio" value="by-price-asc" checked aria-hidden="true">
+																					<span class="option-select__option-name">Цена по возрастанию</span>
+																					<span class="option-select__option-indicator">
+																						<span></span>
+																					</span>
+																				</label>
+																			</li>
+																			<li class="option-select__option">
+																				<label class="option-select__option-label">
+																					<input form="products-filter-form" name="order" type="radio" class="option-select__option-radio" value="by-price-desc" aria-hidden="true">
+																					<span class="option-select__option-name">Цена по убыванию</span>
+																					<span class="option-select__option-indicator">
+																						<span></span>
+																					</span>
+																				</label>
+																			</li>
+																		</ul>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="catalogue__open-filter-btn-area">
+														<button class="btn btn_orange open-filter-btn" data-drawer-open="filters">
+															Фильтр
+															<span class="open-filter-btn__icon-wrapper">
+																<svg class="open-filter-btn__icon" viewbox="0 0 20 12">
+																	<use xlink:href='img/icons/icons.svg#filters'></use>
+																</svg>
+																<span class="open-filter-btn__counter">3</span>
+															</span>
+														</button>
+													</div>
+													<div class="applied-filters">
+														<ul class="applied-filters__list">
+															<li class="applied-filters__item applied-filters__item_clear">
+																<span class="applied-filters__item-caption">Очистить все</span>
+																<button class="applied-filters__item-btn">
+																	<svg class="applied-filters__item-btn-icon" viewbox="0 0 10 10">
+																		<use xlink:href='img/icons/icons.svg#close'></use>
+																	</svg>
+																</button>
+															</li>
+															<script type="text/template" id="applied-filter-item">
+																<span class="applied-filters__item-caption"></span>
+										<button class="applied-filters__item-btn">
+											<svg class="applied-filters__item-btn-icon" viewbox="0 0 7 7">
+												<use xlink:href='img/icons/icons.svg#close'></use>
+											</svg>
+										</button>
+								</script>
+														</ul>
+													</div>
+												</div>
+												<div class="catalogue__body">
+													<div class="catalogue-grid">
+														<div class="catalogue-grid__inner">
+															<div class="catalogue-grid__item">
+																<div class="catalogue-grid__item-inner">
+																	<div class="product-card">
+																		<a href="#" target="_self" class="product-card__top">
+																			<div class="product-card__top-inner">
+																				<img src="img/store/catalogue/colonna_group_gold 1.jpg" alt="Product image" class="product-card__image">
+																				<div class="product-card__product-dimensions">L30 W40 H50</div>
+																			</div>
+																		</a>
+																		<div class="product-card__middle">
+																			<dl class="product-card__detail">
+																				<dt class="product-card__detail-name">Форма</dt>
+																				<dd class="product-card__detail-value">Colonna</dd>
+																			</dl>
+																			<dl class="product-card__detail">
+																				<dt class="product-card__detail-name">Фактура</dt>
+																				<dd class="product-card__detail-value">Gold</dd>
+																			</dl>
+																		</div>
+																		<div class="product-card__bottom">
+																			<div class="product-card__bottom-block">
+																				<p class="product-card__avail-status warehouse">В наличии</p>
+																				<span class="product-card__price" data-currency="₽">150 090&nbsp;</span>
+																			</div>
+																			<button class="btn btn_black product-card__btn">
+																				Перейти
+																			</button>
+																			<div class="product-card__product-name">
+																				Conic Nero
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="catalogue-grid__item">
+																<div class="catalogue-grid__item-inner">
+																	<div class="product-card">
+																		<a href="#" target="_self" class="product-card__top">
+																			<div class="product-card__top-inner">
+																				<img src="img/store/catalogue/cone_group_nero.jpg" alt="Product image" class="product-card__image">
+																				<div class="product-card__product-dimensions">D30 H20</div>
+																			</div>
+																		</a>
+																		<div class="product-card__middle">
+																			<dl class="product-card__detail">
+																				<dt class="product-card__detail-name">Форма</dt>
+																				<dd class="product-card__detail-value">Cone</dd>
+																			</dl>
+																			<dl class="product-card__detail">
+																				<dt class="product-card__detail-name">Фактура</dt>
+																				<dd class="product-card__detail-value">Nero</dd>
+																			</dl>
+																		</div>
+																		<div class="product-card__bottom">
+																			<div class="product-card__bottom-block">
+																				<p class="product-card__avail-status warehouse">В наличии</p>
+																				<span class="product-card__price" data-currency="₽">150 090&nbsp;</span>
+																			</div>
+																			<button class="btn btn_black product-card__btn">
+																				Перейти
+																			</button>
+																			<div class="product-card__product-name">
+																				Conic Nero
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="catalogue-grid__item">
+																<div class="catalogue-grid__item-inner">
+																	<div class="product-card">
+																		<a href="#" target="_self" class="product-card__top">
+																			<div class="product-card__top-inner">
+																				<img src="img/store/catalogue/conus_group_oliva 1.jpg" alt="Product image" class="product-card__image">
+																				<div class="product-card__product-dimensions">D70 H90</div>
+																			</div>
+																		</a>
+																		<div class="product-card__middle">
+																			<dl class="product-card__detail">
+																				<dt class="product-card__detail-name">Форма</dt>
+																				<dd class="product-card__detail-value">Conus</dd>
+																			</dl>
+																			<dl class="product-card__detail">
+																				<dt class="product-card__detail-name">Фактура</dt>
+																				<dd class="product-card__detail-value">Olive</dd>
+																			</dl>
+																		</div>
+																		<div class="product-card__bottom">
+																			<div class="product-card__bottom-block">
+																				<p class="product-card__avail-status warehouse">В наличии</p>
+																				<span class="product-card__price" data-currency="₽">150 090&nbsp;</span>
+																			</div>
+																			<button class="btn btn_black product-card__btn">
+																				Перейти
+																			</button>
+																			<div class="product-card__product-name">
+																				Conic Nero
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="catalogue-grid__item">
+																<div class="catalogue-grid__item-inner">
+																	<div class="product-card">
+																		<a href="#" target="_self" class="product-card__top">
+																			<div class="product-card__top-inner">
+																				<img src="img/store/catalogue/crater_group_sahara 1.jpg" alt="Product image" class="product-card__image">
+																				<div class="product-card__product-dimensions">D30 H20</div>
+																			</div>
+																		</a>
+																		<div class="product-card__middle">
+																			<dl class="product-card__detail">
+																				<dt class="product-card__detail-name">Форма</dt>
+																				<dd class="product-card__detail-value">Crater</dd>
+																			</dl>
+																			<dl class="product-card__detail">
+																				<dt class="product-card__detail-name">Фактура</dt>
+																				<dd class="product-card__detail-value">Sahara</dd>
+																			</dl>
+																		</div>
+																		<div class="product-card__bottom">
+																			<div class="product-card__bottom-block">
+																				<p class="product-card__avail-status warehouse">В наличии</p>
+																				<span class="product-card__price" data-currency="₽">150 090&nbsp;</span>
+																			</div>
+																			<button class="btn btn_black product-card__btn">
+																				Перейти
+																			</button>
+																			<div class="product-card__product-name">
+																				Conic Nero
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="catalogue-grid__item">
+																<div class="catalogue-grid__item-inner">
+																	<div class="product-card">
+																		<a href="#" target="_self" class="product-card__top">
+																			<div class="product-card__top-inner">
+																				<img src="img/store/catalogue/cube_group_santorini 1.jpg" alt="Product image" class="product-card__image">
+																				<div class="product-card__product-dimensions">L30 W30 H30</div>
+																			</div>
+																		</a>
+																		<div class="product-card__middle">
+																			<dl class="product-card__detail">
+																				<dt class="product-card__detail-name">Форма</dt>
+																				<dd class="product-card__detail-value">Cube</dd>
+																			</dl>
+																			<dl class="product-card__detail">
+																				<dt class="product-card__detail-name">Фактура</dt>
+																				<dd class="product-card__detail-value">Santorini</dd>
+																			</dl>
+																		</div>
+																		<div class="product-card__bottom">
+																			<div class="product-card__bottom-block">
+																				<p class="product-card__avail-status warehouse">В наличии</p>
+																				<span class="product-card__price" data-currency="₽">150 090&nbsp;</span>
+																			</div>
+																			<button class="btn btn_black product-card__btn">
+																				Перейти
+																			</button>
+																			<div class="product-card__product-name">
+																				Conic Nero
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="catalogue-grid__item">
+																<div class="catalogue-grid__item-inner">
+																	<div class="product-card">
+																		<a href="#" target="_self" class="product-card__top">
+																			<div class="product-card__top-inner">
+																				<img src="img/store/catalogue/cylinder_group_shale 1.jpg" alt="Product image" class="product-card__image">
+																				<div class="product-card__product-dimensions">D70 H90</div>
+																			</div>
+																		</a>
+																		<div class="product-card__middle">
+																			<dl class="product-card__detail">
+																				<dt class="product-card__detail-name">Форма</dt>
+																				<dd class="product-card__detail-value">Cylinder</dd>
+																			</dl>
+																			<dl class="product-card__detail">
+																				<dt class="product-card__detail-name">Фактура</dt>
+																				<dd class="product-card__detail-value">Shale</dd>
+																			</dl>
+																		</div>
+																		<div class="product-card__bottom">
+																			<div class="product-card__bottom-block">
+																				<p class="product-card__avail-status on-order">Под заказ</p>
+																				<span class="product-card__price" data-currency="₽">55 090&nbsp;</span>
+																			</div>
+																			<button class="btn btn_black product-card__btn">
+																				Перейти
+																			</button>
+																			<div class="product-card__product-name">
+																				Conic Nero
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="catalogue-grid__item">
+																<div class="catalogue-grid__item-inner">
+																	<div class="product-card">
+																		<a href="#" target="_self" class="product-card__top">
+																			<div class="product-card__top-inner">
+																				<img src="img/store/catalogue/cylinder_xl_group_terra 1.jpg" alt="Product image" class="product-card__image">
+																				<div class="product-card__product-dimensions">D50 H60</div>
+																			</div>
+																		</a>
+																		<div class="product-card__middle">
+																			<dl class="product-card__detail">
+																				<dt class="product-card__detail-name">Форма</dt>
+																				<dd class="product-card__detail-value">Cylinder XL</dd>
+																			</dl>
+																			<dl class="product-card__detail">
+																				<dt class="product-card__detail-name">Фактура</dt>
+																				<dd class="product-card__detail-value">Terracotta</dd>
+																			</dl>
+																		</div>
+																		<div class="product-card__bottom">
+																			<div class="product-card__bottom-block">
+																				<p class="product-card__avail-status on-order">Под заказ</p>
+																				<span class="product-card__price" data-currency="₽">150 090&nbsp;</span>
+																			</div>
+																			<button class="btn btn_black product-card__btn">
+																				Перейти
+																			</button>
+																			<div class="product-card__product-name">
+																				Conic Nero
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="catalogue-grid__item">
+																<div class="catalogue-grid__item-inner">
+																	<div class="product-card">
+																		<a href="#" target="_self" class="product-card__top">
+																			<div class="product-card__top-inner">
+																				<img src="img/store/catalogue/devider_group_sahara 1.jpg" alt="Product image" class="product-card__image">
+																				<div class="product-card__product-dimensions">L40 W60 H60</div>
+																			</div>
+																		</a>
+																		<div class="product-card__middle">
+																			<dl class="product-card__detail">
+																				<dt class="product-card__detail-name">Форма</dt>
+																				<dd class="product-card__detail-value">Devider</dd>
+																			</dl>
+																			<dl class="product-card__detail">
+																				<dt class="product-card__detail-name">Фактура</dt>
+																				<dd class="product-card__detail-value">Sahara</dd>
+																			</dl>
+																		</div>
+																		<div class="product-card__bottom">
+																			<div class="product-card__bottom-block">
+																				<p class="product-card__avail-status warehouse">В наличии</p>
+																				<span class="product-card__price" data-currency="₽">150 090&nbsp;</span>
+																			</div>
+																			<button class="btn btn_black product-card__btn">
+																				Перейти
+																			</button>
+																			<div class="product-card__product-name">
+																				Conic Nero
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="catalogue-grid__item">
+																<div class="catalogue-grid__item-inner">
+																	<div class="product-card">
+																		<a href="#" target="_self" class="product-card__top">
+																			<div class="product-card__top-inner">
+																				<img src="img/store/catalogue/duet_group_nero 1.jpg" alt="Product image" class="product-card__image">
+																				<div class="product-card__product-dimensions">D70 H90</div>
+																			</div>
+																		</a>
+																		<div class="product-card__middle">
+																			<dl class="product-card__detail">
+																				<dt class="product-card__detail-name">Форма</dt>
+																				<dd class="product-card__detail-value">Duet</dd>
+																			</dl>
+																			<dl class="product-card__detail">
+																				<dt class="product-card__detail-name">Фактура</dt>
+																				<dd class="product-card__detail-value">Nero</dd>
+																			</dl>
+																		</div>
+																		<div class="product-card__bottom">
+																			<div class="product-card__bottom-block">
+																				<p class="product-card__avail-status warehouse">В наличии</p>
+																				<span class="product-card__price" data-currency="₽">150 090&nbsp;</span>
+																			</div>
+																			<button class="btn btn_black product-card__btn">
+																				Перейти
+																			</button>
+																			<div class="product-card__product-name">
+																				Conic Nero
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="catalogue__footer">
+													<div class="catalogue__pagination pagination">
+														<a href="." class="pagination__btn pagination__btn_active">
+															<span class="pagination__btn-caption">1</span>
+														</a>
+														<a href="." class="pagination__btn">
+															<span class="pagination__btn-caption">2</span>
+														</a>
+														<a href="." class="pagination__btn">
+															<span class="pagination__btn-caption">3</span>
+														</a>
+														<a href="." class="pagination__btn">
+															<span class="pagination__btn-caption">4</span>
+														</a>
+														<a href="." class="pagination__btn">
+															<span class="pagination__btn-caption">...</span>
+														</a>
+														<a href="." class="pagination__btn">
+															<span class="pagination__btn-caption">8</span>
+														</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</section>
+						</div>
+					</div>
+				</section>
+			</main>
+		</div>
+		<footer class="footer footer_right">
+			<div class="footer__container">
+				<figure class="footer__logo logo">
+					<a href="/"><img src="img/logo.svg" alt="Logo"></a>
+				</figure>
+				<div class="footer__main-menu-area" data-portal-src="main-menu" data-portal-media="(max-width: 720px)">
+					<div class="footer__main-menu main-menu">
+						<button type="button" class="main-menu__btn menu-btn">
+							<span>
+								<span></span>
+								<span></span>
+								<span></span>
+							</span>
+							<span>MENU</span>
+						</button>
+						<div class="main-menu__nav-underlay">
+							<div class="main-menu__nav-wrap">
+								<div class="main-menu__nav-panel">
+									<div class="main-menu__nav-panel-inner">
+										<nav class="main-menu__nav">
+											<ul>
+												<li><a href="/" class="">MAIN PAGE</a></li>
+												<li><a href="/projects.html" class="">PROJECTS</a></li>
+												<li><a href="/store.html" class="active">ONLINE STORE</a></li>
+												<li><a href="/collections.html" class="">COLLECTIONS</a></li>
+												<!-- <li><a href="#" class="">SHAPES</a></li> -->
+												<li><a href="/catalogue.html" class="">CATALOGY</a></li>
+												<li><a href="/planters-to-order.html" class="">planters to order</a></li>
+											</ul>
+											<div class="main-menu__add-nav-area" data-portal-dest="add-nav"></div>
+										</nav>
+										<div class="main-menu__lang-select-area" data-portal-dest="lang-select"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="footer__group">
+					<nav class="footer__add-nav" data-portal-src="add-nav" data-portal-media="(max-width: 720px), (min-width: 992px) and (max-width: 1120px)">
+						<ul>
+							<li><a href="/where-to-buy.html" class="">WHERE TO BUY?</a></li>
+							<li><a href="/contacts.html" class="">CONTACTS</a></li>
+						</ul>
+					</nav>
+					<div class="footer__lang-select-area" data-portal-src="lang-select" data-portal-media="(max-width: 720px)">
+						<select name="lang" id="lang-select" data-simple-select>
+							<option value="en" data-caption-value="ENG">English</option>
+							<option value="es" data-caption-value="SPA">Español</option>
+							<option value="de" data-caption-value="DEU">Deutsch</option>
+							<option value="it" data-caption-value="ITA">Italiano</option>
+						</select>
+					</div>
+					<div class="footer__contacts-btn-area" data-portal-src="contacts-btn" data-portal-media="(max-width: 720px)">
+						<button type="button" class="footer__contacts-btn contacts-btn" data-drawer-open="contact-form">
+							<svg viewbox="0 0 21 21">
+								<use xlink:href='img/icons/icons.svg#contacts'></use>
+							</svg>
+						</button>
+					</div>
+					<div class="footer__cart-area" data-portal-src="shop-cart" data-portal-media="(max-width: 720px)">
+						<button type="button" class="footer__cart cart">
+							<svg viewbox="0 0 32 28">
+								<use xlink:href='img/icons/icons.svg#cart'></use>
+							</svg>
+							<div>1</div>
+						</button>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<section class="drawers">
+		<div class="drawer drawer_overlapping drawer_modal" data-drawer="contact-form" data-scrollable>
+			<div class="drawer__panel">
+				<div class="drawer__inner contact-form-drawer__inner">
+					<div class="drawer__header">
+						<div class="drawer__header-inner">
+							<h2 class="drawer__title contact-form-drawer__title">Order a feedback</h2>
+							<button type="button" class="contact-form-drawer__close-btn drawer__close-btn" data-drawer-close="contact-form"></button>
+						</div>
+					</div>
+					<div class="drawer__body">
+						<form name="feedback-order" class="form" novalidate>
+							<div class="form__row form-msg mb-50">
+								Please leave your name, number and a message and someone will call you back.
+							</div>
+							<div class="form__row form__row_grid-2c mb-30">
+								<div class="form__field field" data-name="country">
+									<label class="field__label">
+										country*
+									</label>
+									<select name="country" id="drawer-country-select" class="field__input" data-class="field__v-input w-100p" data-placeholder="Choose your counry">
+										<option value="ae">ОАЭ</option>
+										<option value="it">Италия</option>
+										<option value="de">Германия</option>
+									</select>
+									<span class="field__error" data-alias="required">Choose your counry</span>
+								</div>
+								<div class="form__field field">
+									<label class="field__label">
+										Name*
+									</label>
+									<input type="text" name="name" class="field__input form-input" placeholder="Enter your name"></input>
+									<span class="field__error" data-alias="required">Введите имя</span>
+								</div>
+							</div>
+							<div class="form__row form__row_grid-2c mb-30">
+								<div class="form__field field">
+									<label class="field__label">
+										phone*
+									</label>
+									<input required type="tel" name="phone" class="field__input form-input" placeholder="Enter the number"></input>
+									<span class="field__error" data-alias="required">Введите номер</span>
+									<span class="field__error" data-alias="matches" data-method="matches" data-pattern="">Некорректные данные</span>
+								</div>
+								<div class="form__field field" data-name="email">
+									<label class="field__label">
+										E-mail*
+									</label>
+									<input required type="email" name="email" class="field__input form-input" placeholder="Enter an e-mail"></input>
+									<span class="field__error" data-alias="required">Введите e-mail</span>
+									<span class="field__error" data-alias="email">Некорректные данные</span>
+								</div>
+							</div>
+							<div class="form__row mb-15">
+								<div class="form__field field">
+									<label class="field__label">
+										Message
+									</label>
+									<textarea name="message" class="field__input form-input form-input_textarea" placeholder="Write your message"></textarea>
+								</div>
+							</div>
+							<div class="form__row mb-50">
+								<div class="form__field field">
+									<label class="input-checkbox">
+										<input type="checkbox" name="agreement-accepted" class="field__input input-checkbox__input" checked>
+										<span class="input-checkbox__body">
+											<svg class="input-checkbox__icon" viewbox="0 0 8 4">
+												<use xlink:href='img/icons/icons.svg#checkbox-arrow'></use>
+											</svg>
+										</span>
+										<span class="input-checkbox__label form-input-label">I accept the terms of the user agreement</span>
+									</label>
+									<span class="field__error" data-alias="checked">Нужно принять соглашение</span>
+								</div>
+							</div>
+							<div class="form__row mb-30">
+								<button type="submit" class="btn btn_black w-100p">
+									Send
+								</button>
+							</div>
+							<dl class="feedback-phone">
+								<dt>You can also contact us by phone:</dt>
+								<dd><a href="tel:+9 999 99-99" class="hoverable hoverable_underline-in">+9 999 99-99</a></dd>
+							</dl>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="drawer drawer_overlapping drawer_modal" data-drawer="contact-request-confirm" data-scrollable>
+			<div class="drawer__panel">
+				<div class="drawer__inner contact-form-drawer__inner">
+					<div class="drawer__header">
+						<div class="drawer__header-inner">
+							<h2 class="drawer__title contact-form-drawer__title">Thank you for<br>contacting us!</h2>
+							<button type="button" class="contact-form-drawer__close-btn drawer__close-btn" data-drawer-close="contact-request-confirm"></button>
+						</div>
+					</div>
+					<div class="drawer__body">
+						<div class="form-msg">
+							Our managers will contact you in the near future.
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="drawer drawer_overlapping drawer_right" data-drawer="textures" data-scrollable>
+			<div class="drawer__panel">
+				<div class="drawer__inner drawer__inner_spaced">
+					<div class="drawer__header drawer__header_separated">
+						<div class="drawer__header-inner">
+							<h2 class="drawer__title drawer-title">Фактура</h2>
+							<button type="button" class="drawer__close-btn" data-drawer-close="textures"></button>
+						</div>
+					</div>
+					<div class="drawer__body">
+						<div class="textures__ drawer-palette  drawer-palette">
+							<div class=" drawer-palette__group">
+								<h4 class=" drawer-palette__group-name">Classic: для улиц и помещений</h4>
+								<div class=" drawer-palette__table">
+									<ul class=" drawer-palette__table-list">
+										<li class=" drawer-palette__item">
+											<span class=" drawer-palette__item-inner">
+												<label class=" drawer-palette-card">
+													<input type="radio" form="products-filter-form" name="texture" class=" drawer-palette-card__input" value="Gold">
+													<span class=" drawer-palette-card__body">
+														<img src="img/textures/gold.jpg" alt="gold.jpg" class=" drawer-palette-card__img">
+													</span>
+													<span class=" drawer-palette-card__name">Gold</span>
+												</label>
+											</span>
+										</li>
+										<li class=" drawer-palette__item">
+											<span class=" drawer-palette__item-inner">
+												<label class=" drawer-palette-card">
+													<input type="radio" form="products-filter-form" name="texture" class=" drawer-palette-card__input" value="Sahara">
+													<span class=" drawer-palette-card__body">
+														<img src="img/textures/sahara.jpg" alt="sahara.jpg" class=" drawer-palette-card__img">
+													</span>
+													<span class=" drawer-palette-card__name">Sahara</span>
+												</label>
+											</span>
+										</li>
+										<li class=" drawer-palette__item">
+											<span class=" drawer-palette__item-inner">
+												<label class=" drawer-palette-card">
+													<input type="radio" form="products-filter-form" name="texture" class=" drawer-palette-card__input" value="Nero">
+													<span class=" drawer-palette-card__body">
+														<img src="img/textures/nero.jpg" alt="nero.jpg" class=" drawer-palette-card__img">
+													</span>
+													<span class=" drawer-palette-card__name">Nero</span>
+												</label>
+											</span>
+										</li>
+										<li class=" drawer-palette__item">
+											<span class=" drawer-palette__item-inner">
+												<label class=" drawer-palette-card">
+													<input type="radio" form="products-filter-form" name="texture" class=" drawer-palette-card__input" value="Olive">
+													<span class=" drawer-palette-card__body">
+														<img src="img/textures/olive.jpg" alt="olive.jpg" class=" drawer-palette-card__img">
+													</span>
+													<span class=" drawer-palette-card__name">Olive</span>
+												</label>
+											</span>
+										</li>
+										<li class=" drawer-palette__item">
+											<span class=" drawer-palette__item-inner">
+												<label class=" drawer-palette-card">
+													<input type="radio" form="products-filter-form" name="texture" class=" drawer-palette-card__input" value="Shale">
+													<span class=" drawer-palette-card__body">
+														<img src="img/textures/shale.jpg" alt="shale.jpg" class=" drawer-palette-card__img">
+													</span>
+													<span class=" drawer-palette-card__name">Shale</span>
+												</label>
+											</span>
+										</li>
+										<li class=" drawer-palette__item">
+											<span class=" drawer-palette__item-inner">
+												<label class=" drawer-palette-card">
+													<input type="radio" form="products-filter-form" name="texture" class=" drawer-palette-card__input" value="Terracotta">
+													<span class=" drawer-palette-card__body">
+														<img src="img/textures/terra-cotta.jpg" alt="terra-cotta.jpg" class=" drawer-palette-card__img">
+													</span>
+													<span class=" drawer-palette-card__name">Terracotta</span>
+												</label>
+											</span>
+										</li>
+										<li class=" drawer-palette__item">
+											<span class=" drawer-palette__item-inner">
+												<label class=" drawer-palette-card">
+													<input type="radio" form="products-filter-form" name="texture" class=" drawer-palette-card__input" value="Santorini">
+													<span class=" drawer-palette-card__body">
+														<img src="img/textures/santorini.jpg" alt="santorini.jpg" class=" drawer-palette-card__img">
+													</span>
+													<span class=" drawer-palette-card__name">Santorini</span>
+												</label>
+											</span>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class=" drawer-palette__group">
+								<h4 class=" drawer-palette__group-name">Color: для помещений</h4>
+								<div class=" drawer-palette__table">
+									<ul class=" drawer-palette__table-list">
+										<li class=" drawer-palette__item">
+											<span class=" drawer-palette__item-inner">
+												<label class=" drawer-palette-card">
+													<input type="radio" form="products-filter-form" name="texture" class=" drawer-palette-card__input" value="Avocado Green">
+													<span class=" drawer-palette-card__body">
+														<img src="img/textures/avocado.jpg" alt="avocado.jpg" class=" drawer-palette-card__img">
+													</span>
+													<span class=" drawer-palette-card__name">Avocado Green</span>
+												</label>
+											</span>
+										</li>
+										<li class=" drawer-palette__item">
+											<span class=" drawer-palette__item-inner">
+												<label class=" drawer-palette-card">
+													<input type="radio" form="products-filter-form" name="texture" class=" drawer-palette-card__input" value="Blue Sky">
+													<span class=" drawer-palette-card__body">
+														<img src="img/textures/blue_sky.jpg" alt="blue_sky.jpg" class=" drawer-palette-card__img">
+													</span>
+													<span class=" drawer-palette-card__name">Blue Sky</span>
+												</label>
+											</span>
+										</li>
+										<li class=" drawer-palette__item">
+											<span class=" drawer-palette__item-inner">
+												<label class=" drawer-palette-card">
+													<input type="radio" form="products-filter-form" name="texture" class=" drawer-palette-card__input" value="Blueberry">
+													<span class=" drawer-palette-card__body">
+														<img src="img/textures/blueberry.jpg" alt="blueberry.jpg" class=" drawer-palette-card__img">
+													</span>
+													<span class=" drawer-palette-card__name">Blueberry</span>
+												</label>
+											</span>
+										</li>
+										<li class=" drawer-palette__item">
+											<span class=" drawer-palette__item-inner">
+												<label class=" drawer-palette-card">
+													<input type="radio" form="products-filter-form" name="texture" class=" drawer-palette-card__input" value="Classic Clay">
+													<span class=" drawer-palette-card__body">
+														<img src="img/textures/classic_clay.jpg" alt="classic_clay.jpg" class=" drawer-palette-card__img">
+													</span>
+													<span class=" drawer-palette-card__name">Classic Clay</span>
+												</label>
+											</span>
+										</li>
+										<li class=" drawer-palette__item">
+											<span class=" drawer-palette__item-inner">
+												<label class=" drawer-palette-card">
+													<input type="radio" form="products-filter-form" name="texture" class=" drawer-palette-card__input" value="Cloudy Blue">
+													<span class=" drawer-palette-card__body">
+														<img src="img/textures/cloudy_blue.jpg" alt="cloudy_blue.jpg" class=" drawer-palette-card__img">
+													</span>
+													<span class=" drawer-palette-card__name">Cloudy Blue</span>
+												</label>
+											</span>
+										</li>
+										<li class=" drawer-palette__item">
+											<span class=" drawer-palette__item-inner">
+												<label class=" drawer-palette-card">
+													<input type="radio" form="products-filter-form" name="texture" class=" drawer-palette-card__input" value="Cobalt Blue">
+													<span class=" drawer-palette-card__body">
+														<img src="img/textures/cobalt_blue.jpg" alt="cobalt_blue.jpg" class=" drawer-palette-card__img">
+													</span>
+													<span class=" drawer-palette-card__name">Cobalt Blue</span>
+												</label>
+											</span>
+										</li>
+										<li class=" drawer-palette__item">
+											<span class=" drawer-palette__item-inner">
+												<label class=" drawer-palette-card">
+													<input type="radio" form="products-filter-form" name="texture" class=" drawer-palette-card__input" value="Coffee">
+													<span class=" drawer-palette-card__body">
+														<img src="img/textures/coffee.jpg" alt="coffee.jpg" class=" drawer-palette-card__img">
+													</span>
+													<span class=" drawer-palette-card__name">Coffee</span>
+												</label>
+											</span>
+										</li>
+										<li class=" drawer-palette__item">
+											<span class=" drawer-palette__item-inner">
+												<label class=" drawer-palette-card">
+													<input type="radio" form="products-filter-form" name="texture" class=" drawer-palette-card__input" value="Lemon Clay">
+													<span class=" drawer-palette-card__body">
+														<img src="img/textures/lemon_clay.jpg" alt="lemon_clay.jpg" class=" drawer-palette-card__img">
+													</span>
+													<span class=" drawer-palette-card__name">Lemon Clay</span>
+												</label>
+											</span>
+										</li>
+										<li class=" drawer-palette__item">
+											<span class=" drawer-palette__item-inner">
+												<label class=" drawer-palette-card">
+													<input type="radio" form="products-filter-form" name="texture" class=" drawer-palette-card__input" value="Red Clay">
+													<span class=" drawer-palette-card__body">
+														<img src="img/textures/red_clay.jpg" alt="red_clay.jpg" class=" drawer-palette-card__img">
+													</span>
+													<span class=" drawer-palette-card__name">Red Clay</span>
+												</label>
+											</span>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class=" drawer-palette__group">
+								<h4 class=" drawer-palette__group-name">Midnight: для помещений</h4>
+								<div class=" drawer-palette__table">
+									<ul class=" drawer-palette__table-list">
+										<li class=" drawer-palette__item">
+											<span class=" drawer-palette__item-inner">
+												<label class=" drawer-palette-card">
+													<input type="radio" form="products-filter-form" name="texture" class=" drawer-palette-card__input" value="Brezent Grey">
+													<span class=" drawer-palette-card__body">
+														<img src="img/textures/brezent_grey.jpg" alt="brezent_grey.jpg" class=" drawer-palette-card__img">
+													</span>
+													<span class=" drawer-palette-card__name">Brezent Grey</span>
+												</label>
+											</span>
+										</li>
+										<li class=" drawer-palette__item">
+											<span class=" drawer-palette__item-inner">
+												<label class=" drawer-palette-card">
+													<input type="radio" form="products-filter-form" name="texture" class=" drawer-palette-card__input" value="Smokey Blue">
+													<span class=" drawer-palette-card__body">
+														<img src="img/textures/smokey_blue.jpg" alt="smokey_blue.jpg" class=" drawer-palette-card__img">
+													</span>
+													<span class=" drawer-palette-card__name">Smokey Blue</span>
+												</label>
+											</span>
+										</li>
+										<li class=" drawer-palette__item">
+											<span class=" drawer-palette__item-inner">
+												<label class=" drawer-palette-card">
+													<input type="radio" form="products-filter-form" name="texture" class=" drawer-palette-card__input" value="Charcoal">
+													<span class=" drawer-palette-card__body">
+														<img src="img/textures/charcoal.jpg" alt="charcoal.jpg" class=" drawer-palette-card__img">
+													</span>
+													<span class=" drawer-palette-card__name">Charcoal</span>
+												</label>
+											</span>
+										</li>
+										<li class=" drawer-palette__item">
+											<span class=" drawer-palette__item-inner">
+												<label class=" drawer-palette-card">
+													<input type="radio" form="products-filter-form" name="texture" class=" drawer-palette-card__input" value="Ocean Green">
+													<span class=" drawer-palette-card__body">
+														<img src="img/textures/ocean_green.jpg" alt="ocean_green.jpg" class=" drawer-palette-card__img">
+													</span>
+													<span class=" drawer-palette-card__name">Ocean Green</span>
+												</label>
+											</span>
+										</li>
+										<li class=" drawer-palette__item">
+											<span class=" drawer-palette__item-inner">
+												<label class=" drawer-palette-card">
+													<input type="radio" form="products-filter-form" name="texture" class=" drawer-palette-card__input" value="Antracite">
+													<span class=" drawer-palette-card__body">
+														<img src="img/textures/antracite.jpg" alt="antracite.jpg" class=" drawer-palette-card__img">
+													</span>
+													<span class=" drawer-palette-card__name">Antracite</span>
+												</label>
+											</span>
+										</li>
+										<li class=" drawer-palette__item">
+											<span class=" drawer-palette__item-inner">
+												<label class=" drawer-palette-card">
+													<input type="radio" form="products-filter-form" name="texture" class=" drawer-palette-card__input" value="Smokey Grey">
+													<span class=" drawer-palette-card__body">
+														<img src="img/textures/smokey_grey.jpg" alt="smokey_grey.jpg" class=" drawer-palette-card__img">
+													</span>
+													<span class=" drawer-palette-card__name">Smokey Grey</span>
+												</label>
+											</span>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class=" drawer-palette__group">
+								<h4 class=" drawer-palette__group-name">Surface: для помещений</h4>
+								<div class=" drawer-palette__table">
+									<ul class=" drawer-palette__table-list">
+										<li class=" drawer-palette__item">
+											<span class=" drawer-palette__item-inner">
+												<label class=" drawer-palette-card">
+													<input type="radio" form="products-filter-form" name="texture" class=" drawer-palette-card__input" value="Black Max">
+													<span class=" drawer-palette-card__body">
+														<img src="img/textures/black_max.jpg" alt="black_max.jpg" class=" drawer-palette-card__img">
+													</span>
+													<span class=" drawer-palette-card__name">Black Max</span>
+												</label>
+											</span>
+										</li>
+										<li class=" drawer-palette__item">
+											<span class=" drawer-palette__item-inner">
+												<label class=" drawer-palette-card">
+													<input type="radio" form="products-filter-form" name="texture" class=" drawer-palette-card__input" value="Cooper Max">
+													<span class=" drawer-palette-card__body">
+														<img src="img/textures/cooper_max.jpg" alt="cooper_max.jpg" class=" drawer-palette-card__img">
+													</span>
+													<span class=" drawer-palette-card__name">Cooper Max</span>
+												</label>
+											</span>
+										</li>
+										<li class=" drawer-palette__item">
+											<span class=" drawer-palette__item-inner">
+												<label class=" drawer-palette-card">
+													<input type="radio" form="products-filter-form" name="texture" class=" drawer-palette-card__input" value="Crocodile">
+													<span class=" drawer-palette-card__body">
+														<img src="img/textures/crocodile.jpg" alt="crocodile.jpg" class=" drawer-palette-card__img">
+													</span>
+													<span class=" drawer-palette-card__name">Crocodile</span>
+												</label>
+											</span>
+										</li>
+										<li class=" drawer-palette__item">
+											<span class=" drawer-palette__item-inner">
+												<label class=" drawer-palette-card">
+													<input type="radio" form="products-filter-form" name="texture" class=" drawer-palette-card__input" value="Erosia Black">
+													<span class=" drawer-palette-card__body">
+														<img src="img/textures/erosia_black.jpg" alt="erosia_black.jpg" class=" drawer-palette-card__img">
+													</span>
+													<span class=" drawer-palette-card__name">Erosia Black</span>
+												</label>
+											</span>
+										</li>
+										<li class=" drawer-palette__item">
+											<span class=" drawer-palette__item-inner">
+												<label class=" drawer-palette-card">
+													<input type="radio" form="products-filter-form" name="texture" class=" drawer-palette-card__input" value="Erosia Blue">
+													<span class=" drawer-palette-card__body">
+														<img src="img/textures/erosia_blue.jpg" alt="erosia_blue.jpg" class=" drawer-palette-card__img">
+													</span>
+													<span class=" drawer-palette-card__name">Erosia Blue</span>
+												</label>
+											</span>
+										</li>
+										<li class=" drawer-palette__item">
+											<span class=" drawer-palette__item-inner">
+												<label class=" drawer-palette-card">
+													<input type="radio" form="products-filter-form" name="texture" class=" drawer-palette-card__input" value="Erosia Coral">
+													<span class=" drawer-palette-card__body">
+														<img src="img/textures/erosia_coral.jpg" alt="erosia_coral.jpg" class=" drawer-palette-card__img">
+													</span>
+													<span class=" drawer-palette-card__name">Erosia Coral</span>
+												</label>
+											</span>
+										</li>
+										<li class=" drawer-palette__item">
+											<span class=" drawer-palette__item-inner">
+												<label class=" drawer-palette-card">
+													<input type="radio" form="products-filter-form" name="texture" class=" drawer-palette-card__input" value="Erosia Gray">
+													<span class=" drawer-palette-card__body">
+														<img src="img/textures/erosia_gray.jpg" alt="erosia_gray.jpg" class=" drawer-palette-card__img">
+													</span>
+													<span class=" drawer-palette-card__name">Erosia Gray</span>
+												</label>
+											</span>
+										</li>
+										<li class=" drawer-palette__item">
+											<span class=" drawer-palette__item-inner">
+												<label class=" drawer-palette-card">
+													<input type="radio" form="products-filter-form" name="texture" class=" drawer-palette-card__input" value="Erosia Ochre">
+													<span class=" drawer-palette-card__body">
+														<img src="img/textures/erosia_ochre.jpg" alt="erosia_ochre.jpg" class=" drawer-palette-card__img">
+													</span>
+													<span class=" drawer-palette-card__name">Erosia Ochre</span>
+												</label>
+											</span>
+										</li>
+										<li class=" drawer-palette__item">
+											<span class=" drawer-palette__item-inner">
+												<label class=" drawer-palette-card">
+													<input type="radio" form="products-filter-form" name="texture" class=" drawer-palette-card__input" value="Erosia White">
+													<span class=" drawer-palette-card__body">
+														<img src="img/textures/erosia_white.jpg" alt="erosia_white.jpg" class=" drawer-palette-card__img">
+													</span>
+													<span class=" drawer-palette-card__name">Erosia White</span>
+												</label>
+											</span>
+										</li>
+										<li class=" drawer-palette__item">
+											<span class=" drawer-palette__item-inner">
+												<label class=" drawer-palette-card">
+													<input type="radio" form="products-filter-form" name="texture" class=" drawer-palette-card__input" value="Erosia Yellow">
+													<span class=" drawer-palette-card__body">
+														<img src="img/textures/erosia_yellow.jpg" alt="erosia_yellow.jpg" class=" drawer-palette-card__img">
+													</span>
+													<span class=" drawer-palette-card__name">Erosia Yellow</span>
+												</label>
+											</span>
+										</li>
+										<li class=" drawer-palette__item">
+											<span class=" drawer-palette__item-inner">
+												<label class=" drawer-palette-card">
+													<input type="radio" form="products-filter-form" name="texture" class=" drawer-palette-card__input" value="Erosia">
+													<span class=" drawer-palette-card__body">
+														<img src="img/textures/erosia.jpg" alt="erosia.jpg" class=" drawer-palette-card__img">
+													</span>
+													<span class=" drawer-palette-card__name">Erosia</span>
+												</label>
+											</span>
+										</li>
+										<li class=" drawer-palette__item">
+											<span class=" drawer-palette__item-inner">
+												<label class=" drawer-palette-card">
+													<input type="radio" form="products-filter-form" name="texture" class=" drawer-palette-card__input" value="Gold Max">
+													<span class=" drawer-palette-card__body">
+														<img src="img/textures/gold_max.jpg" alt="gold_max.jpg" class=" drawer-palette-card__img">
+													</span>
+													<span class=" drawer-palette-card__name">Gold Max</span>
+												</label>
+											</span>
+										</li>
+										<li class=" drawer-palette__item">
+											<span class=" drawer-palette__item-inner">
+												<label class=" drawer-palette-card">
+													<input type="radio" form="products-filter-form" name="texture" class=" drawer-palette-card__input" value="Premium Grey">
+													<span class=" drawer-palette-card__body">
+														<img src="img/textures/premium_gray.jpg" alt="premium_gray.jpg" class=" drawer-palette-card__img">
+													</span>
+													<span class=" drawer-palette-card__name">Premium Grey</span>
+												</label>
+											</span>
+										</li>
+										<li class=" drawer-palette__item">
+											<span class=" drawer-palette__item-inner">
+												<label class=" drawer-palette-card">
+													<input type="radio" form="products-filter-form" name="texture" class=" drawer-palette-card__input" value="Ribeye">
+													<span class=" drawer-palette-card__body">
+														<img src="img/textures/ribeye.jpg" alt="ribeye.jpg" class=" drawer-palette-card__img">
+													</span>
+													<span class=" drawer-palette-card__name">Ribeye</span>
+												</label>
+											</span>
+										</li>
+										<li class=" drawer-palette__item">
+											<span class=" drawer-palette__item-inner">
+												<label class=" drawer-palette-card">
+													<input type="radio" form="products-filter-form" name="texture" class=" drawer-palette-card__input" value="Silver Max">
+													<span class=" drawer-palette-card__body">
+														<img src="img/textures/silver_max.jpg" alt="silver_max.jpg" class=" drawer-palette-card__img">
+													</span>
+													<span class=" drawer-palette-card__name">Silver Max</span>
+												</label>
+											</span>
+										</li>
+										<li class=" drawer-palette__item">
+											<span class=" drawer-palette__item-inner">
+												<label class=" drawer-palette-card">
+													<input type="radio" form="products-filter-form" name="texture" class=" drawer-palette-card__input" value="Slanets">
+													<span class=" drawer-palette-card__body">
+														<img src="img/textures/slanets.jpg" alt="slanets.jpg" class=" drawer-palette-card__img">
+													</span>
+													<span class=" drawer-palette-card__name">Slanets</span>
+												</label>
+											</span>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class=" drawer-palette__group">
+								<h4 class=" drawer-palette__group-name">Concrete: для помещений</h4>
+								<div class=" drawer-palette__table">
+									<ul class=" drawer-palette__table-list">
+										<li class=" drawer-palette__item">
+											<span class=" drawer-palette__item-inner">
+												<label class=" drawer-palette-card">
+													<input type="radio" form="products-filter-form" name="texture" class=" drawer-palette-card__input" value="Taupe Concrete">
+													<span class=" drawer-palette-card__body">
+														<img src="img/textures/taupe_concrete.jpg" alt="taupe_concrete.jpg" class=" drawer-palette-card__img">
+													</span>
+													<span class=" drawer-palette-card__name">Taupe Concrete</span>
+												</label>
+											</span>
+										</li>
+										<li class=" drawer-palette__item">
+											<span class=" drawer-palette__item-inner">
+												<label class=" drawer-palette-card">
+													<input type="radio" form="products-filter-form" name="texture" class=" drawer-palette-card__input" value="Brownie">
+													<span class=" drawer-palette-card__body">
+														<img src="img/textures/brownie.jpg" alt="brownie.jpg" class=" drawer-palette-card__img">
+													</span>
+													<span class=" drawer-palette-card__name">Brownie</span>
+												</label>
+											</span>
+										</li>
+										<li class=" drawer-palette__item">
+											<span class=" drawer-palette__item-inner">
+												<label class=" drawer-palette-card">
+													<input type="radio" form="products-filter-form" name="texture" class=" drawer-palette-card__input" value="Concrete Gray Dark">
+													<span class=" drawer-palette-card__body">
+														<img src="img/textures/concrete_gray_dark.jpg" alt="concrete_gray_dark.jpg" class=" drawer-palette-card__img">
+													</span>
+													<span class=" drawer-palette-card__name">Concrete Gray Dark</span>
+												</label>
+											</span>
+										</li>
+										<li class=" drawer-palette__item">
+											<span class=" drawer-palette__item-inner">
+												<label class=" drawer-palette-card">
+													<input type="radio" form="products-filter-form" name="texture" class=" drawer-palette-card__input" value="Concrete Gray Light">
+													<span class=" drawer-palette-card__body">
+														<img src="img/textures/concrete_gray_light.jpg" alt="concrete_gray_light.jpg" class=" drawer-palette-card__img">
+													</span>
+													<span class=" drawer-palette-card__name">Concrete Gray Light</span>
+												</label>
+											</span>
+										</li>
+										<li class=" drawer-palette__item">
+											<span class=" drawer-palette__item-inner">
+												<label class=" drawer-palette-card">
+													<input type="radio" form="products-filter-form" name="texture" class=" drawer-palette-card__input" value="Concrete M100">
+													<span class=" drawer-palette-card__body">
+														<img src="img/textures/concrete_m100.jpg" alt="concrete_m100.jpg" class=" drawer-palette-card__img">
+													</span>
+													<span class=" drawer-palette-card__name">Concrete M100</span>
+												</label>
+											</span>
+										</li>
+										<li class=" drawer-palette__item">
+											<span class=" drawer-palette__item-inner">
+												<label class=" drawer-palette-card">
+													<input type="radio" form="products-filter-form" name="texture" class=" drawer-palette-card__input" value="Concrete White">
+													<span class=" drawer-palette-card__body">
+														<img src="img/textures/concrete_white.jpg" alt="concrete_white.jpg" class=" drawer-palette-card__img">
+													</span>
+													<span class=" drawer-palette-card__name">Concrete White</span>
+												</label>
+											</span>
+										</li>
+										<li class=" drawer-palette__item">
+											<span class=" drawer-palette__item-inner">
+												<label class=" drawer-palette-card">
+													<input type="radio" form="products-filter-form" name="texture" class=" drawer-palette-card__input" value="Medovik">
+													<span class=" drawer-palette-card__body">
+														<img src="img/textures/medovik.jpg" alt="medovik.jpg" class=" drawer-palette-card__img">
+													</span>
+													<span class=" drawer-palette-card__name">Medovik</span>
+												</label>
+											</span>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="drawer drawer_overlapping drawer_right" data-drawer="shapes" data-scrollable>
+			<div class="drawer__panel">
+				<div class="drawer__inner drawer__inner_spaced">
+					<div class="drawer__header drawer__header_separated">
+						<div class="drawer__header-inner">
+							<h2 class="drawer__title drawer-title">Форма</h2>
+							<button type="button" class="drawer__close-btn" data-drawer-close="shapes"></button>
+						</div>
+					</div>
+					<div class="drawer__body">
+						<div id="shapes-palette" class="shapes__palette palette">
+							<div class="drawer-palette__group">
+								<h4 class="drawer-palette__group-name">Круглые</h4>
+								<div class="drawer-palette__table">
+									<ul class="drawer-palette__table-list">
+										<li class="drawer-palette__item">
+											<span class="drawer-palette__item-inner">
+												<label class="drawer-palette-card drawer-palette-card_form">
+													<input type="radio" form="products-filter-form" name="shape" class="drawer-palette-card__input" value="Bowl">
+													<span class="drawer-palette-card__body">
+														<img src="img/shapes/Bowl.svg" alt="Bowl.svg" class="drawer-palette-card__img drawer-palette-card__img_shape">
+													</span>
+													<span class="drawer-palette-card__name">Bowl</span>
+												</label>
+											</span>
+										</li>
+										<li class="drawer-palette__item">
+											<span class="drawer-palette__item-inner">
+												<label class="drawer-palette-card drawer-palette-card_form">
+													<input type="radio" form="products-filter-form" name="shape" class="drawer-palette-card__input" value="Upon">
+													<span class="drawer-palette-card__body">
+														<img src="img/shapes/Upon.svg" alt="Upon.svg" class="drawer-palette-card__img drawer-palette-card__img_shape">
+													</span>
+													<span class="drawer-palette-card__name">Upon</span>
+												</label>
+											</span>
+										</li>
+										<li class="drawer-palette__item">
+											<span class="drawer-palette__item-inner">
+												<label class="drawer-palette-card drawer-palette-card_form">
+													<input type="radio" form="products-filter-form" name="shape" class="drawer-palette-card__input" value="Crater">
+													<span class="drawer-palette-card__body">
+														<img src="img/shapes/Crater.svg" alt="Crater.svg" class="drawer-palette-card__img drawer-palette-card__img_shape">
+													</span>
+													<span class="drawer-palette-card__name">Crater</span>
+												</label>
+											</span>
+										</li>
+										<li class="drawer-palette__item">
+											<span class="drawer-palette__item-inner">
+												<label class="drawer-palette-card drawer-palette-card_form">
+													<input type="radio" form="products-filter-form" name="shape" class="drawer-palette-card__input" value="Vase 3">
+													<span class="drawer-palette-card__body">
+														<img src="img/shapes/Vase 3.svg" alt="Vase 3.svg" class="drawer-palette-card__img drawer-palette-card__img_shape">
+													</span>
+													<span class="drawer-palette-card__name">Vase 3</span>
+												</label>
+											</span>
+										</li>
+										<li class="drawer-palette__item">
+											<span class="drawer-palette__item-inner">
+												<label class="drawer-palette-card drawer-palette-card_form">
+													<input type="radio" form="products-filter-form" name="shape" class="drawer-palette-card__input" value="Cylinder">
+													<span class="drawer-palette-card__body">
+														<img src="img/shapes/Cylinder.svg" alt="Cylinder.svg" class="drawer-palette-card__img drawer-palette-card__img_shape">
+													</span>
+													<span class="drawer-palette-card__name">Cylinder</span>
+												</label>
+											</span>
+										</li>
+										<li class="drawer-palette__item">
+											<span class="drawer-palette__item-inner">
+												<label class="drawer-palette-card drawer-palette-card_form">
+													<input type="radio" form="products-filter-form" name="shape" class="drawer-palette-card__input" value="Oval">
+													<span class="drawer-palette-card__body">
+														<img src="img/shapes/Oval.svg" alt="Oval.svg" class="drawer-palette-card__img drawer-palette-card__img_shape">
+													</span>
+													<span class="drawer-palette-card__name">Oval</span>
+												</label>
+											</span>
+										</li>
+										<li class="drawer-palette__item">
+											<span class="drawer-palette__item-inner">
+												<label class="drawer-palette-card drawer-palette-card_form">
+													<input type="radio" form="products-filter-form" name="shape" class="drawer-palette-card__input" value="Cigar">
+													<span class="drawer-palette-card__body">
+														<img src="img/shapes/Cigar.svg" alt="Cigar.svg" class="drawer-palette-card__img drawer-palette-card__img_shape">
+													</span>
+													<span class="drawer-palette-card__name">Cigar</span>
+												</label>
+											</span>
+										</li>
+										<li class="drawer-palette__item">
+											<span class="drawer-palette__item-inner">
+												<label class="drawer-palette-card drawer-palette-card_form">
+													<input type="radio" form="products-filter-form" name="shape" class="drawer-palette-card__input" value="Veranda">
+													<span class="drawer-palette-card__body">
+														<img src="img/shapes/Veranda.svg" alt="Veranda.svg" class="drawer-palette-card__img drawer-palette-card__img_shape">
+													</span>
+													<span class="drawer-palette-card__name">Veranda</span>
+												</label>
+											</span>
+										</li>
+										<li class="drawer-palette__item">
+											<span class="drawer-palette__item-inner">
+												<label class="drawer-palette-card drawer-palette-card_form">
+													<input type="radio" form="products-filter-form" name="shape" class="drawer-palette-card__input" value="Barrel">
+													<span class="drawer-palette-card__body">
+														<img src="img/shapes/Barrel.svg" alt="Barrel.svg" class="drawer-palette-card__img drawer-palette-card__img_shape">
+													</span>
+													<span class="drawer-palette-card__name">Barrel</span>
+												</label>
+											</span>
+										</li>
+										<li class="drawer-palette__item">
+											<span class="drawer-palette__item-inner">
+												<label class="drawer-palette-card drawer-palette-card_form">
+													<input type="radio" form="products-filter-form" name="shape" class="drawer-palette-card__input" value="Cone">
+													<span class="drawer-palette-card__body">
+														<img src="img/shapes/Cone.svg" alt="Cone.svg" class="drawer-palette-card__img drawer-palette-card__img_shape">
+													</span>
+													<span class="drawer-palette-card__name">Cone</span>
+												</label>
+											</span>
+										</li>
+										<li class="drawer-palette__item">
+											<span class="drawer-palette__item-inner">
+												<label class="drawer-palette-card drawer-palette-card_form">
+													<input type="radio" form="products-filter-form" name="shape" class="drawer-palette-card__input" value="Topper">
+													<span class="drawer-palette-card__body">
+														<img src="img/shapes/Topper.svg" alt="Topper.svg" class="drawer-palette-card__img drawer-palette-card__img_shape">
+													</span>
+													<span class="drawer-palette-card__name">Topper</span>
+												</label>
+											</span>
+										</li>
+										<li class="drawer-palette__item">
+											<span class="drawer-palette__item-inner">
+												<label class="drawer-palette-card drawer-palette-card_form">
+													<input type="radio" form="products-filter-form" name="shape" class="drawer-palette-card__input" value="Cylinder XL">
+													<span class="drawer-palette-card__body">
+														<img src="img/shapes/Cylinder XL.svg" alt="Cylinder XL.svg" class="drawer-palette-card__img drawer-palette-card__img_shape">
+													</span>
+													<span class="drawer-palette-card__name">Cylinder XL</span>
+												</label>
+											</span>
+										</li>
+										<li class="drawer-palette__item">
+											<span class="drawer-palette__item-inner">
+												<label class="drawer-palette-card drawer-palette-card_form">
+													<input type="radio" form="products-filter-form" name="shape" class="drawer-palette-card__input" value="Duet">
+													<span class="drawer-palette-card__body">
+														<img src="img/shapes/Duet.svg" alt="Duet.svg" class="drawer-palette-card__img drawer-palette-card__img_shape">
+													</span>
+													<span class="drawer-palette-card__name">Duet</span>
+												</label>
+											</span>
+										</li>
+										<li class="drawer-palette__item">
+											<span class="drawer-palette__item-inner">
+												<label class="drawer-palette-card drawer-palette-card_form">
+													<input type="radio" form="products-filter-form" name="shape" class="drawer-palette-card__input" value="Conus">
+													<span class="drawer-palette-card__body">
+														<img src="img/shapes/Conus.svg" alt="Conus.svg" class="drawer-palette-card__img drawer-palette-card__img_shape">
+													</span>
+													<span class="drawer-palette-card__name">Conus</span>
+												</label>
+											</span>
+										</li>
+										<li class="drawer-palette__item">
+											<span class="drawer-palette__item-inner">
+												<label class="drawer-palette-card drawer-palette-card_form">
+													<input type="radio" form="products-filter-form" name="shape" class="drawer-palette-card__input" value="Peak">
+													<span class="drawer-palette-card__body">
+														<img src="img/shapes/Peak.svg" alt="Peak.svg" class="drawer-palette-card__img drawer-palette-card__img_shape">
+													</span>
+													<span class="drawer-palette-card__name">Peak</span>
+												</label>
+											</span>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="drawer-palette__group">
+								<h4 class="drawer-palette__group-name">Прямоугольные</h4>
+								<div class="drawer-palette__table">
+									<ul class="drawer-palette__table-list">
+										<li class="drawer-palette__item">
+											<span class="drawer-palette__item-inner">
+												<label class="drawer-palette-card drawer-palette-card_form">
+													<input type="radio" form="products-filter-form" name="shape" class="drawer-palette-card__input" value="Conic">
+													<span class="drawer-palette-card__body">
+														<img src="img/shapes/Conic.svg" alt="Conic.svg" class="drawer-palette-card__img drawer-palette-card__img_shape">
+													</span>
+													<span class="drawer-palette-card__name">Conic</span>
+												</label>
+											</span>
+										</li>
+										<li class="drawer-palette__item">
+											<span class="drawer-palette__item-inner">
+												<label class="drawer-palette-card drawer-palette-card_form">
+													<input type="radio" form="products-filter-form" name="shape" class="drawer-palette-card__input" value="Devider">
+													<span class="drawer-palette-card__body">
+														<img src="img/shapes/Devider.svg" alt="Devider.svg" class="drawer-palette-card__img drawer-palette-card__img_shape">
+													</span>
+													<span class="drawer-palette-card__name">Devider</span>
+												</label>
+											</span>
+										</li>
+										<li class="drawer-palette__item">
+											<span class="drawer-palette__item-inner">
+												<label class="drawer-palette-card drawer-palette-card_form">
+													<input type="radio" form="products-filter-form" name="shape" class="drawer-palette-card__input" value="Balcony">
+													<span class="drawer-palette-card__body">
+														<img src="img/shapes/Balcony.svg" alt="Balcony.svg" class="drawer-palette-card__img drawer-palette-card__img_shape">
+													</span>
+													<span class="drawer-palette-card__name">Balcony</span>
+												</label>
+											</span>
+										</li>
+										<li class="drawer-palette__item">
+											<span class="drawer-palette__item-inner">
+												<label class="drawer-palette-card drawer-palette-card_form">
+													<input type="radio" form="products-filter-form" name="shape" class="drawer-palette-card__input" value="Colonna">
+													<span class="drawer-palette-card__body">
+														<img src="img/shapes/Colonna.svg" alt="Colonna.svg" class="drawer-palette-card__img drawer-palette-card__img_shape">
+													</span>
+													<span class="drawer-palette-card__name">Colonna</span>
+												</label>
+											</span>
+										</li>
+										<li class="drawer-palette__item">
+											<span class="drawer-palette__item-inner">
+												<label class="drawer-palette-card drawer-palette-card_form">
+													<input type="radio" form="products-filter-form" name="shape" class="drawer-palette-card__input" value="Cube">
+													<span class="drawer-palette-card__body">
+														<img src="img/shapes/Cube.svg" alt="Cube.svg" class="drawer-palette-card__img drawer-palette-card__img_shape">
+													</span>
+													<span class="drawer-palette-card__name">Cube</span>
+												</label>
+											</span>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="drawer drawer_overlapping drawer_left filters-drawer" data-drawer="filters" data-scrollable>
+			<div class="drawer__panel filters-drawer__panel">
+				<div class="drawer__inner">
+					<div class="drawer__header drawer__header_separated filters-drawer__header">
+						<div class="drawer__header-inner">
+							<h2 class="drawer__title drawer-title">Фильтры</h2>
+							<button type="button" class="filters-drawer__close-btn drawer__close-btn" data-drawer-close="filters"></button>
+						</div>
+					</div>
+					<div class="drawer__body filters-drawer__body" data-portal-dest="filters">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="drawer drawer_overlapping drawer_right" data-drawer="type" data-scrollable>
+			<div class="drawer__panel">
+				<div class="drawer__inner drawer__inner_spaced">
+					<div class="drawer__header drawer__header_separated">
+						<div class="drawer__header-inner">
+							<h2 class="drawer__title drawer-title">Тип</h2>
+							<button type="button" class="drawer__close-btn" data-drawer-close="type"></button>
+						</div>
+					</div>
+					<div class="drawer__body" data-portal-dest="type">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="drawer drawer_overlapping drawer_right" data-drawer="placing" data-scrollable>
+			<div class="drawer__panel">
+				<div class="drawer__inner drawer__inner_spaced">
+					<div class="drawer__header drawer__header_separated">
+						<div class="drawer__header-inner">
+							<h2 class="drawer__title drawer-title">Размещение</h2>
+							<button type="button" class="drawer__close-btn" data-drawer-close="placing"></button>
+						</div>
+					</div>
+					<div class="drawer__body" data-portal-dest="placing">
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<script src="libs/tua-bsl.umd.js?_v=20230601122951"></script>
+	<script src="js/common.min.js?_v=20230601122951"></script>
+	<script src="js/store.min.js?_v=20230601122951"></script>
+</body>
+
+</html>

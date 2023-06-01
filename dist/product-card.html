@@ -1,0 +1,1378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Product Card</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel='stylesheet' href='css/common.min.css?_v=20230601122951'>
+	<link rel='stylesheet' href='css/product-card.min.css?_v=20230601122951'>
+	<!-- <link rel="stylesheet" href="css/swiper-bundle.min.css?_v=20230601122951"> -->
+
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		@import url(https://fonts.googleapis.com/css?family=Roboto:300,regular,500,);
+		@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,regular,600,700);
+	</style>
+	<script>
+		window.onerror = function(message, url, line, col, errorObj) {
+			alert(`${message}\n${url}, ${line}:${col}`);
+		};
+	</script>
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header header_right">
+			<div class="header__container">
+				<div class="header__logo-wrap">
+					<figure class="header__logo logo">
+						<a href="/"><img src="img/logo.svg" alt="Logo"></a>
+					</figure>
+				</div>
+				<div class="header__contacts-btn-area" data-portal-dest="contacts-btn"></div>
+				<div class="header__cart-area" data-portal-dest="shop-cart"></div>
+				<div class="header__menu-area" data-portal-dest="main-menu">
+				</div>
+			</div>
+		</header>
+		<div class="inner">
+			<main class="page">
+				<section class="section-slider swiper">
+					<div class="swiper-wrapper section-slider__wrapper">
+						<div class="swiper-slide page__gallery-area">
+							<section class="main-gallery">
+								<div class="main-gallery__wrap" data-portal-src="main-gallery" data-portal-media="(max-width: 992px)">
+									<div class="main-gallery__slider swiper">
+										<div class="main-gallery__prev-btn swiper-btn swiper-btn_prev">
+											<svg viewbox="0 0 22 17">
+												<use xlink:href='img/icons/icons.svg#nav-arrow-left'></use>
+											</svg>
+										</div>
+										<div class="main-gallery__next-btn swiper-btn swiper-btn_next">
+											<svg viewbox="0 0 22 17">
+												<use xlink:href='img/icons/icons.svg#nav-arrow-left'></use>
+											</svg>
+										</div>
+										<div class="swiper-wrapper">
+											<div href="." class="swiper-slide main-gallery__slide">
+												<img src="img/product-card/cone-sahara/02.jpg" alt="img/product-card/cone-sahara/02.jpg" loading="lazy">
+												<div class="swiper-lazy-preloader"></div>
+											</div>
+											<div href="." class="swiper-slide main-gallery__slide">
+												<img src="img/product-card/cone-sahara/02.jpg" alt="img/product-card/cone-sahara/02.jpg" loading="lazy">
+												<div class="swiper-lazy-preloader"></div>
+											</div>
+											<div href="." class="swiper-slide main-gallery__slide">
+												<img src="img/product-card/cone-sahara/03.jpg" alt="img/product-card/cone-sahara/03.jpg" loading="lazy">
+												<div class="swiper-lazy-preloader"></div>
+											</div>
+											<div href="." class="swiper-slide main-gallery__slide">
+												<img src="img/product-card/cone-sahara/04.jpg" alt="img/product-card/cone-sahara/04.jpg" loading="lazy">
+												<div class="swiper-lazy-preloader"></div>
+											</div>
+											<div href="." class="swiper-slide main-gallery__slide">
+												<img src="img/product-card/cone-sahara/05.jpg" alt="img/product-card/cone-sahara/05.jpg" loading="lazy">
+												<div class="swiper-lazy-preloader"></div>
+											</div>
+										</div>
+										<div class="main-gallery__paggination"></div>
+									</div>
+									<div class="main-gallery__footer">
+										<div class="main-gallery__thumbs main-gallery-thumbs">
+											<div class="main-gallery-thumbs__prev-btn-area">
+												<div class="swiper-btn swiper-btn_prev swiper-btn_small main-gallery-thumbs__prev-btn">
+													<svg viewbox="0 0 22 17">
+														<use xlink:href='img/icons/icons.svg#nav-arrow-left'></use>
+													</svg>
+												</div>
+											</div>
+											<div class="main-gallery-thumbs__slider swiper">
+												<div class="swiper-wrapper">
+													<div class="swiper-slide main-gallery-thumbs__slide">
+														<img src="img/product-card/cone-sahara/thumbs/01.jpg" alt="img">
+													</div>
+													<div class="swiper-slide main-gallery-thumbs__slide">
+														<img src="img/product-card/cone-sahara/thumbs/02.jpg" alt="img">
+													</div>
+													<div class="swiper-slide main-gallery-thumbs__slide">
+														<img src="img/product-card/cone-sahara/thumbs/03.jpg" alt="img">
+													</div>
+													<div class="swiper-slide main-gallery-thumbs__slide">
+														<img src="img/product-card/cone-sahara/thumbs/04.jpg" alt="img">
+													</div>
+													<div class="swiper-slide main-gallery-thumbs__slide">
+														<img src="img/product-card/cone-sahara/thumbs/05.jpg" alt="img">
+													</div>
+												</div>
+											</div>
+											<div class="main-gallery-thumbs__next-btn-area">
+												<div class="swiper-btn swiper-btn_next swiper-btn_small main-gallery-thumbs__next-btn">
+													<svg viewbox="0 0 22 17">
+														<use xlink:href='img/icons/icons.svg#nav-arrow-left'></use>
+													</svg>
+												</div>
+											</div>
+										</div>
+										<div class="main-gallery__footer-ctrls">
+											<button type="button" class="text-btn hoverable" data-drawer-open="shape-samples-thumbs">Примеры кашпо в этой форме</button>
+											<button type="button" class="text-btn hoverable" data-drawer-open="texture-samples-thumbs">Примеры кашпо в этой фактуре</button>
+										</div>
+									</div>
+								</div>
+							</section>
+						</div>
+						<div class="swiper-slide page__info-area">
+							<section class="content product-card">
+								<form id="order-options-form" name="order-options" class="product-card__body">
+									<div class="product-card__container">
+										<div class="product-card__breadcrumbs breadcrumbs">
+											<div class="breadcrumbs__root">Online store</div>
+										</div>
+										<h1 class="section-title mb-10">CONE SAHARA</h1>
+										<div class="mb-30 tablet-mb-40 mob-mb-30" data-portal-src="card-service-btns" data-portal-media="(max-width: 991.98px)">
+											<button type="button" class="text-btn hoverable mb-11px" data-drawer-open="placement-note">Эта фактура подходит только для помещений</button>
+											<div class="product-card__availability">
+												<span class="product-card__availability-msg">В наличии</span>
+												<button type="button" class="product-card__text-btn text-btn hoverable" data-drawer-open="availability">Уточнить количество</button>
+											</div>
+										</div>
+									</div>
+									<div data-portal-dest="main-gallery"></div>
+									<div class="product-card__container">
+										<div class="product-detail mb-30">
+											<div class="product-detail__label">Размер (D, H)</div>
+											<div class="product-detail__body">
+												<ul class="flex-row flex-wrap gap-15">
+													<li>
+														<label class="cm-radio-button">
+															<input name="size" type="radio" value="D24 H26" />
+															<span class="cm-radio-button__body">
+																D24 H26 см
+															</span>
+														</label>
+													</li>
+													<li>
+														<label class="cm-radio-button">
+															<input name="size" type="radio" value="D36 H75" />
+															<span class="cm-radio-button__body">
+																D36 H75 см
+															</span>
+														</label>
+													</li>
+													<li>
+														<label class="cm-radio-button">
+															<input name="size" type="radio" value="D38 H41" />
+															<span class="cm-radio-button__body">
+																D38 H41 см
+															</span>
+														</label>
+													</li>
+													<li>
+														<label class="cm-radio-button">
+															<input name="size" type="radio" value="D39 H60" />
+															<span class="cm-radio-button__body">
+																D39 H60 см
+															</span>
+														</label>
+													</li>
+												</ul>
+											</div>
+										</div>
+										<div class="product-detail mb-30">
+											<div class="product-detail__label">Фактура</div>
+											<div class="product-detail__body">
+												<div class="detail-select detail-select_inline">
+													<button type="button" id="texture-select" class="detail-select__btn" data-drawer-open="textures">
+														<span class="detail-select__btn-cap">SAHARA</span>
+													</button>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="product-card__container mb-20">
+										<div class="products-summary">
+											<!-- <span class="products-summary__label">Итого:</span> -->
+											<span class="products-summary__price" data-currency="₽">11&nbsp;200&nbsp;</span>
+										</div>
+										<div class="flex-col gap-12">
+											<button type="submit" class="btn btn_black pt-13 pb-12 fw-400">В корзину</button>
+											<!-- <button id="loan-order" type="button" class="btn btn_clear pt-13 pb-12">Рассрочка от 1000 рублей в месяц</button> -->
+										</div>
+									</div>
+									<div>
+										<ul id="product-card-accordeon" class="product-card-accordeon product-card__accordeon">
+											<li class="product-card-accordeon__item accordeon-item">
+												<div class="product-card-accordeon__header accordeon-header">
+													<span class="product-card-accordeon__item-title">Характеристики</span>
+													<span class="product-card-accordeon__btn"></span>
+												</div>
+												<div class="product-card-accordeon__body accordeon-body">
+													<div class="product-card-accordeon__body-inner">
+														<dl class="flex-col gap-20">
+															<div class="product-detail">
+																<dt class="product-detail__label">Диаметр чаши</dt>
+																<dd class="product-detail__body">78 см</dd>
+															</div>
+															<div class="product-detail">
+																<dt class="product-detail__label">Высота чаши</dt>
+																<dd class="product-detail__body">16 см</dd>
+															</div>
+															<div class="product-detail">
+																<dt class="product-detail__label">Размер крестовины</dt>
+																<dd class="product-detail__body">70*45 см</dd>
+															</div>
+															<div class="product-detail">
+																<dt class="product-detail__label">Вес</dt>
+																<dd class="product-detail__body">115 кг</dd>
+															</div>
+														</dl>
+													</div>
+												</div>
+											</li>
+											<li class="product-card-accordeon__item accordeon-item">
+												<div class="product-card-accordeon__header accordeon-header">
+													<span class="product-card-accordeon__item-title">Описание</span>
+													<span class="product-card-accordeon__btn"></span>
+												</div>
+												<div class="product-card-accordeon__body accordeon-body">
+													<div class="product-card-accordeon__body-inner">
+														<div class="product-card-desc">
+															<h3 class="product-card-desc__header">ДРЕНАЖ, АВТОПОЛИВ И ДРУГИЕ ОПЦИИ</h3>
+															<div class="product-card-desc__text">Для установки на улице дренажные отверстия обязательны, предупредите нас, и мы сделаем дренажные отверстия при производстве кашпо. Дренажные отверстия Вы можете сделать самостоятельно при помощи дрели, кромки дренажных отверстий покрыть гидроизолирующим составом.</div>
+															<h3 class="product-card-desc__header">ДРЕНАЖ, АВТОПОЛИВ И ДРУГИЕ ОПЦИИ</h3>
+															<div class="product-card-desc__text">Для установки на улице дренажные отверстия обязательны, предупредите нас, и мы сделаем дренажные отверстия при производстве кашпо. Дренажные отверстия Вы можете сделать самостоятельно при помощи дрели, кромки дренажных отверстий покрыть гидроизолирующим составом.</div>
+														</div>
+													</div>
+												</div>
+											</li>
+										</ul>
+									</div>
+									<div class="product-card__container">
+										<h3 class="product-card__selection-title">Вы выбрали</h3>
+										<ul class="flex-col gap-10 py-10 border-bot-gray">
+											<li class="selected-product">
+												<div class="selected-product__img-area">
+													<img src="img/product-card/selection-thumbs/001.jpg" alt="Selection img" class="selected-product__img">
+												</div>
+												<span class="selected-product__name">Cone Cobalt Blue 38 х 41</span>
+												<span class="selected-product__price">5&nbsp;600&nbsp;₽</span>
+												<div class="selected-product__amount-select-area">
+													<div class="amount-select amount-select_foldable">
+														<button type="button" class="amount-select__btn amount-select__btn_dec"></button>
+														<input type="number" pattern="\d+" class="amount-select__input" value="0">
+														<button type="button" class="amount-select__btn amount-select__btn_inc"></button>
+													</div>
+												</div>
+											</li>
+											<li class="selected-product">
+												<div class="selected-product__img-area">
+													<img src="img/product-card/selection-thumbs/001.jpg" alt="Selection img" class="selected-product__img">
+												</div>
+												<span class="selected-product__name">Cone Cobalt Blue 38 х 41</span>
+												<span class="selected-product__price">5&nbsp;600&nbsp;₽</span>
+												<div class="selected-product__amount-select-area">
+													<div class="amount-select amount-select_foldable">
+														<button type="button" class="amount-select__btn amount-select__btn_dec"></button>
+														<input type="number" pattern="\d+" class="amount-select__input" value="0">
+														<button type="button" class="amount-select__btn amount-select__btn_inc"></button>
+													</div>
+												</div>
+											</li>
+										</ul>
+										<div class="product-card__min-order-remark">Минимальная партия с растением - 3 единицы!</div>
+									</div>
+								</form>
+							</section>
+						</div>
+					</div>
+				</section>
+			</main>
+		</div>
+		<footer class="footer footer_right">
+			<div class="footer__container">
+				<figure class="footer__logo logo">
+					<a href="/"><img src="img/logo.svg" alt="Logo"></a>
+				</figure>
+				<div class="footer__main-menu-area" data-portal-src="main-menu" data-portal-media="(max-width: 720px)">
+					<div class="footer__main-menu main-menu">
+						<button type="button" class="main-menu__btn menu-btn">
+							<span>
+								<span></span>
+								<span></span>
+								<span></span>
+							</span>
+							<span>MENU</span>
+						</button>
+						<div class="main-menu__nav-underlay">
+							<div class="main-menu__nav-wrap">
+								<div class="main-menu__nav-panel">
+									<div class="main-menu__nav-panel-inner">
+										<nav class="main-menu__nav">
+											<ul>
+												<li><a href="/" class="">MAIN PAGE</a></li>
+												<li><a href="/projects.html" class="">PROJECTS</a></li>
+												<li><a href="/store.html" class="">ONLINE STORE</a></li>
+												<li><a href="/collections.html" class="">COLLECTIONS</a></li>
+												<!-- <li><a href="#" class="">SHAPES</a></li> -->
+												<li><a href="/catalogue.html" class="">CATALOGY</a></li>
+												<li><a href="/planters-to-order.html" class="">planters to order</a></li>
+											</ul>
+											<div class="main-menu__add-nav-area" data-portal-dest="add-nav"></div>
+										</nav>
+										<div class="main-menu__lang-select-area" data-portal-dest="lang-select"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="footer__group">
+					<nav class="footer__add-nav" data-portal-src="add-nav" data-portal-media="(max-width: 720px), (min-width: 992px) and (max-width: 1120px)">
+						<ul>
+							<li><a href="/where-to-buy.html" class="">WHERE TO BUY?</a></li>
+							<li><a href="/contacts.html" class="">CONTACTS</a></li>
+						</ul>
+					</nav>
+					<div class="footer__lang-select-area" data-portal-src="lang-select" data-portal-media="(max-width: 720px)">
+						<select name="lang" id="lang-select" data-simple-select>
+							<option value="en" data-caption-value="ENG">English</option>
+							<option value="es" data-caption-value="SPA">Español</option>
+							<option value="de" data-caption-value="DEU">Deutsch</option>
+							<option value="it" data-caption-value="ITA">Italiano</option>
+						</select>
+					</div>
+					<div class="footer__contacts-btn-area" data-portal-src="contacts-btn" data-portal-media="(max-width: 720px)">
+						<button type="button" class="footer__contacts-btn contacts-btn" data-drawer-open="contact-form">
+							<svg viewbox="0 0 21 21">
+								<use xlink:href='img/icons/icons.svg#contacts'></use>
+							</svg>
+						</button>
+					</div>
+					<div class="footer__cart-area" data-portal-src="shop-cart" data-portal-media="(max-width: 720px)">
+						<button type="button" class="footer__cart cart">
+							<svg viewbox="0 0 32 28">
+								<use xlink:href='img/icons/icons.svg#cart'></use>
+							</svg>
+							<div>1</div>
+						</button>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<section class="drawers">
+		<div class="drawer drawer_overlapping drawer_modal" data-drawer="contact-form" data-scrollable>
+			<div class="drawer__panel">
+				<div class="drawer__inner contact-form-drawer__inner">
+					<div class="drawer__header">
+						<div class="drawer__header-inner">
+							<h2 class="drawer__title contact-form-drawer__title">Order a feedback</h2>
+							<button type="button" class="contact-form-drawer__close-btn drawer__close-btn" data-drawer-close="contact-form"></button>
+						</div>
+					</div>
+					<div class="drawer__body">
+						<form name="feedback-order" class="form" novalidate>
+							<div class="form__row form-msg mb-50">
+								Please leave your name, number and a message and someone will call you back.
+							</div>
+							<div class="form__row form__row_grid-2c mb-30">
+								<div class="form__field field" data-name="country">
+									<label class="field__label">
+										country*
+									</label>
+									<select name="country" id="drawer-country-select" class="field__input" data-class="field__v-input w-100p" data-placeholder="Choose your counry">
+										<option value="ae">ОАЭ</option>
+										<option value="it">Италия</option>
+										<option value="de">Германия</option>
+									</select>
+									<span class="field__error" data-alias="required">Choose your counry</span>
+								</div>
+								<div class="form__field field">
+									<label class="field__label">
+										Name*
+									</label>
+									<input type="text" name="name" class="field__input form-input" placeholder="Enter your name"></input>
+									<span class="field__error" data-alias="required">Введите имя</span>
+								</div>
+							</div>
+							<div class="form__row form__row_grid-2c mb-30">
+								<div class="form__field field">
+									<label class="field__label">
+										phone*
+									</label>
+									<input required type="tel" name="phone" class="field__input form-input" placeholder="Enter the number"></input>
+									<span class="field__error" data-alias="required">Введите номер</span>
+									<span class="field__error" data-alias="matches" data-method="matches" data-pattern="">Некорректные данные</span>
+								</div>
+								<div class="form__field field" data-name="email">
+									<label class="field__label">
+										E-mail*
+									</label>
+									<input required type="email" name="email" class="field__input form-input" placeholder="Enter an e-mail"></input>
+									<span class="field__error" data-alias="required">Введите e-mail</span>
+									<span class="field__error" data-alias="email">Некорректные данные</span>
+								</div>
+							</div>
+							<div class="form__row mb-15">
+								<div class="form__field field">
+									<label class="field__label">
+										Message
+									</label>
+									<textarea name="message" class="field__input form-input form-input_textarea" placeholder="Write your message"></textarea>
+								</div>
+							</div>
+							<div class="form__row mb-50">
+								<div class="form__field field">
+									<label class="input-checkbox">
+										<input type="checkbox" name="agreement-accepted" class="field__input input-checkbox__input" checked>
+										<span class="input-checkbox__body">
+											<svg class="input-checkbox__icon" viewbox="0 0 8 4">
+												<use xlink:href='img/icons/icons.svg#checkbox-arrow'></use>
+											</svg>
+										</span>
+										<span class="input-checkbox__label form-input-label">I accept the terms of the user agreement</span>
+									</label>
+									<span class="field__error" data-alias="checked">Нужно принять соглашение</span>
+								</div>
+							</div>
+							<div class="form__row mb-30">
+								<button type="submit" class="btn btn_black w-100p">
+									Send
+								</button>
+							</div>
+							<dl class="feedback-phone">
+								<dt>You can also contact us by phone:</dt>
+								<dd><a href="tel:+9 999 99-99" class="hoverable hoverable_underline-in">+9 999 99-99</a></dd>
+							</dl>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="drawer drawer_overlapping drawer_modal" data-drawer="contact-request-confirm" data-scrollable>
+			<div class="drawer__panel">
+				<div class="drawer__inner contact-form-drawer__inner">
+					<div class="drawer__header">
+						<div class="drawer__header-inner">
+							<h2 class="drawer__title contact-form-drawer__title">Thank you for<br>contacting us!</h2>
+							<button type="button" class="contact-form-drawer__close-btn drawer__close-btn" data-drawer-close="contact-request-confirm"></button>
+						</div>
+					</div>
+					<div class="drawer__body">
+						<div class="form-msg">
+							Our managers will contact you in the near future.
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="drawer drawer_overlapping drawer_right" data-drawer="textures" data-scrollable>
+			<div class="drawer__panel">
+				<div class="drawer__inner drawer__inner_spaced">
+					<div class="drawer__header drawer__header_separated">
+						<div class="drawer__header-inner">
+							<h2 class="drawer__title drawer-title">Фактура</h2>
+							<button type="button" class="drawer__close-btn" data-drawer-close="textures"></button>
+						</div>
+					</div>
+					<div class="drawer__body">
+						<div class="textures__ drawer-palette  drawer-palette">
+							<div class=" drawer-palette__group">
+								<h4 class=" drawer-palette__group-name">Classic: для улиц и помещений</h4>
+								<div class=" drawer-palette__table">
+									<ul class=" drawer-palette__table-list">
+										<li class=" drawer-palette__item">
+											<span class=" drawer-palette__item-inner">
+												<label class=" drawer-palette-card">
+													<input type="radio" form="order-options-form" name="texture" class=" drawer-palette-card__input" value="Gold">
+													<span class=" drawer-palette-card__body">
+														<img src="img/textures/gold.jpg" alt="gold.jpg" class=" drawer-palette-card__img">
+													</span>
+													<span class=" drawer-palette-card__name">Gold</span>
+												</label>
+											</span>
+										</li>
+										<li class=" drawer-palette__item">
+											<span class=" drawer-palette__item-inner">
+												<label class=" drawer-palette-card">
+													<input type="radio" form="order-options-form" name="texture" class=" drawer-palette-card__input" value="Sahara">
+													<span class=" drawer-palette-card__body">
+														<img src="img/textures/sahara.jpg" alt="sahara.jpg" class=" drawer-palette-card__img">
+													</span>
+													<span class=" drawer-palette-card__name">Sahara</span>
+												</label>
+											</span>
+										</li>
+										<li class=" drawer-palette__item">
+											<span class=" drawer-palette__item-inner">
+												<label class=" drawer-palette-card">
+													<input type="radio" form="order-options-form" name="texture" class=" drawer-palette-card__input" value="Nero">
+													<span class=" drawer-palette-card__body">
+														<img src="img/textures/nero.jpg" alt="nero.jpg" class=" drawer-palette-card__img">
+													</span>
+													<span class=" drawer-palette-card__name">Nero</span>
+												</label>
+											</span>
+										</li>
+										<li class=" drawer-palette__item">
+											<span class=" drawer-palette__item-inner">
+												<label class=" drawer-palette-card">
+													<input type="radio" form="order-options-form" name="texture" class=" drawer-palette-card__input" value="Olive">
+													<span class=" drawer-palette-card__body">
+														<img src="img/textures/olive.jpg" alt="olive.jpg" class=" drawer-palette-card__img">
+													</span>
+													<span class=" drawer-palette-card__name">Olive</span>
+												</label>
+											</span>
+										</li>
+										<li class=" drawer-palette__item">
+											<span class=" drawer-palette__item-inner">
+												<label class=" drawer-palette-card">
+													<input type="radio" form="order-options-form" name="texture" class=" drawer-palette-card__input" value="Shale">
+													<span class=" drawer-palette-card__body">
+														<img src="img/textures/shale.jpg" alt="shale.jpg" class=" drawer-palette-card__img">
+													</span>
+													<span class=" drawer-palette-card__name">Shale</span>
+												</label>
+											</span>
+										</li>
+										<li class=" drawer-palette__item">
+											<span class=" drawer-palette__item-inner">
+												<label class=" drawer-palette-card">
+													<input type="radio" form="order-options-form" name="texture" class=" drawer-palette-card__input" value="Terracotta">
+													<span class=" drawer-palette-card__body">
+														<img src="img/textures/terra-cotta.jpg" alt="terra-cotta.jpg" class=" drawer-palette-card__img">
+													</span>
+													<span class=" drawer-palette-card__name">Terracotta</span>
+												</label>
+											</span>
+										</li>
+										<li class=" drawer-palette__item">
+											<span class=" drawer-palette__item-inner">
+												<label class=" drawer-palette-card">
+													<input type="radio" form="order-options-form" name="texture" class=" drawer-palette-card__input" value="Santorini">
+													<span class=" drawer-palette-card__body">
+														<img src="img/textures/santorini.jpg" alt="santorini.jpg" class=" drawer-palette-card__img">
+													</span>
+													<span class=" drawer-palette-card__name">Santorini</span>
+												</label>
+											</span>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class=" drawer-palette__group">
+								<h4 class=" drawer-palette__group-name">Color: для помещений</h4>
+								<div class=" drawer-palette__table">
+									<ul class=" drawer-palette__table-list">
+										<li class=" drawer-palette__item">
+											<span class=" drawer-palette__item-inner">
+												<label class=" drawer-palette-card">
+													<input type="radio" form="order-options-form" name="texture" class=" drawer-palette-card__input" value="Avocado Green">
+													<span class=" drawer-palette-card__body">
+														<img src="img/textures/avocado.jpg" alt="avocado.jpg" class=" drawer-palette-card__img">
+													</span>
+													<span class=" drawer-palette-card__name">Avocado Green</span>
+												</label>
+											</span>
+										</li>
+										<li class=" drawer-palette__item">
+											<span class=" drawer-palette__item-inner">
+												<label class=" drawer-palette-card">
+													<input type="radio" form="order-options-form" name="texture" class=" drawer-palette-card__input" value="Blue Sky">
+													<span class=" drawer-palette-card__body">
+														<img src="img/textures/blue_sky.jpg" alt="blue_sky.jpg" class=" drawer-palette-card__img">
+													</span>
+													<span class=" drawer-palette-card__name">Blue Sky</span>
+												</label>
+											</span>
+										</li>
+										<li class=" drawer-palette__item">
+											<span class=" drawer-palette__item-inner">
+												<label class=" drawer-palette-card">
+													<input type="radio" form="order-options-form" name="texture" class=" drawer-palette-card__input" value="Blueberry">
+													<span class=" drawer-palette-card__body">
+														<img src="img/textures/blueberry.jpg" alt="blueberry.jpg" class=" drawer-palette-card__img">
+													</span>
+													<span class=" drawer-palette-card__name">Blueberry</span>
+												</label>
+											</span>
+										</li>
+										<li class=" drawer-palette__item">
+											<span class=" drawer-palette__item-inner">
+												<label class=" drawer-palette-card">
+													<input type="radio" form="order-options-form" name="texture" class=" drawer-palette-card__input" value="Classic Clay">
+													<span class=" drawer-palette-card__body">
+														<img src="img/textures/classic_clay.jpg" alt="classic_clay.jpg" class=" drawer-palette-card__img">
+													</span>
+													<span class=" drawer-palette-card__name">Classic Clay</span>
+												</label>
+											</span>
+										</li>
+										<li class=" drawer-palette__item">
+											<span class=" drawer-palette__item-inner">
+												<label class=" drawer-palette-card">
+													<input type="radio" form="order-options-form" name="texture" class=" drawer-palette-card__input" value="Cloudy Blue">
+													<span class=" drawer-palette-card__body">
+														<img src="img/textures/cloudy_blue.jpg" alt="cloudy_blue.jpg" class=" drawer-palette-card__img">
+													</span>
+													<span class=" drawer-palette-card__name">Cloudy Blue</span>
+												</label>
+											</span>
+										</li>
+										<li class=" drawer-palette__item">
+											<span class=" drawer-palette__item-inner">
+												<label class=" drawer-palette-card">
+													<input type="radio" form="order-options-form" name="texture" class=" drawer-palette-card__input" value="Cobalt Blue">
+													<span class=" drawer-palette-card__body">
+														<img src="img/textures/cobalt_blue.jpg" alt="cobalt_blue.jpg" class=" drawer-palette-card__img">
+													</span>
+													<span class=" drawer-palette-card__name">Cobalt Blue</span>
+												</label>
+											</span>
+										</li>
+										<li class=" drawer-palette__item">
+											<span class=" drawer-palette__item-inner">
+												<label class=" drawer-palette-card">
+													<input type="radio" form="order-options-form" name="texture" class=" drawer-palette-card__input" value="Coffee">
+													<span class=" drawer-palette-card__body">
+														<img src="img/textures/coffee.jpg" alt="coffee.jpg" class=" drawer-palette-card__img">
+													</span>
+													<span class=" drawer-palette-card__name">Coffee</span>
+												</label>
+											</span>
+										</li>
+										<li class=" drawer-palette__item">
+											<span class=" drawer-palette__item-inner">
+												<label class=" drawer-palette-card">
+													<input type="radio" form="order-options-form" name="texture" class=" drawer-palette-card__input" value="Lemon Clay">
+													<span class=" drawer-palette-card__body">
+														<img src="img/textures/lemon_clay.jpg" alt="lemon_clay.jpg" class=" drawer-palette-card__img">
+													</span>
+													<span class=" drawer-palette-card__name">Lemon Clay</span>
+												</label>
+											</span>
+										</li>
+										<li class=" drawer-palette__item">
+											<span class=" drawer-palette__item-inner">
+												<label class=" drawer-palette-card">
+													<input type="radio" form="order-options-form" name="texture" class=" drawer-palette-card__input" value="Red Clay">
+													<span class=" drawer-palette-card__body">
+														<img src="img/textures/red_clay.jpg" alt="red_clay.jpg" class=" drawer-palette-card__img">
+													</span>
+													<span class=" drawer-palette-card__name">Red Clay</span>
+												</label>
+											</span>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class=" drawer-palette__group">
+								<h4 class=" drawer-palette__group-name">Midnight: для помещений</h4>
+								<div class=" drawer-palette__table">
+									<ul class=" drawer-palette__table-list">
+										<li class=" drawer-palette__item">
+											<span class=" drawer-palette__item-inner">
+												<label class=" drawer-palette-card">
+													<input type="radio" form="order-options-form" name="texture" class=" drawer-palette-card__input" value="Brezent Grey">
+													<span class=" drawer-palette-card__body">
+														<img src="img/textures/brezent_grey.jpg" alt="brezent_grey.jpg" class=" drawer-palette-card__img">
+													</span>
+													<span class=" drawer-palette-card__name">Brezent Grey</span>
+												</label>
+											</span>
+										</li>
+										<li class=" drawer-palette__item">
+											<span class=" drawer-palette__item-inner">
+												<label class=" drawer-palette-card">
+													<input type="radio" form="order-options-form" name="texture" class=" drawer-palette-card__input" value="Smokey Blue">
+													<span class=" drawer-palette-card__body">
+														<img src="img/textures/smokey_blue.jpg" alt="smokey_blue.jpg" class=" drawer-palette-card__img">
+													</span>
+													<span class=" drawer-palette-card__name">Smokey Blue</span>
+												</label>
+											</span>
+										</li>
+										<li class=" drawer-palette__item">
+											<span class=" drawer-palette__item-inner">
+												<label class=" drawer-palette-card">
+													<input type="radio" form="order-options-form" name="texture" class=" drawer-palette-card__input" value="Charcoal">
+													<span class=" drawer-palette-card__body">
+														<img src="img/textures/charcoal.jpg" alt="charcoal.jpg" class=" drawer-palette-card__img">
+													</span>
+													<span class=" drawer-palette-card__name">Charcoal</span>
+												</label>
+											</span>
+										</li>
+										<li class=" drawer-palette__item">
+											<span class=" drawer-palette__item-inner">
+												<label class=" drawer-palette-card">
+													<input type="radio" form="order-options-form" name="texture" class=" drawer-palette-card__input" value="Ocean Green">
+													<span class=" drawer-palette-card__body">
+														<img src="img/textures/ocean_green.jpg" alt="ocean_green.jpg" class=" drawer-palette-card__img">
+													</span>
+													<span class=" drawer-palette-card__name">Ocean Green</span>
+												</label>
+											</span>
+										</li>
+										<li class=" drawer-palette__item">
+											<span class=" drawer-palette__item-inner">
+												<label class=" drawer-palette-card">
+													<input type="radio" form="order-options-form" name="texture" class=" drawer-palette-card__input" value="Antracite">
+													<span class=" drawer-palette-card__body">
+														<img src="img/textures/antracite.jpg" alt="antracite.jpg" class=" drawer-palette-card__img">
+													</span>
+													<span class=" drawer-palette-card__name">Antracite</span>
+												</label>
+											</span>
+										</li>
+										<li class=" drawer-palette__item">
+											<span class=" drawer-palette__item-inner">
+												<label class=" drawer-palette-card">
+													<input type="radio" form="order-options-form" name="texture" class=" drawer-palette-card__input" value="Smokey Grey">
+													<span class=" drawer-palette-card__body">
+														<img src="img/textures/smokey_grey.jpg" alt="smokey_grey.jpg" class=" drawer-palette-card__img">
+													</span>
+													<span class=" drawer-palette-card__name">Smokey Grey</span>
+												</label>
+											</span>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class=" drawer-palette__group">
+								<h4 class=" drawer-palette__group-name">Surface: для помещений</h4>
+								<div class=" drawer-palette__table">
+									<ul class=" drawer-palette__table-list">
+										<li class=" drawer-palette__item">
+											<span class=" drawer-palette__item-inner">
+												<label class=" drawer-palette-card">
+													<input type="radio" form="order-options-form" name="texture" class=" drawer-palette-card__input" value="Black Max">
+													<span class=" drawer-palette-card__body">
+														<img src="img/textures/black_max.jpg" alt="black_max.jpg" class=" drawer-palette-card__img">
+													</span>
+													<span class=" drawer-palette-card__name">Black Max</span>
+												</label>
+											</span>
+										</li>
+										<li class=" drawer-palette__item">
+											<span class=" drawer-palette__item-inner">
+												<label class=" drawer-palette-card">
+													<input type="radio" form="order-options-form" name="texture" class=" drawer-palette-card__input" value="Cooper Max">
+													<span class=" drawer-palette-card__body">
+														<img src="img/textures/cooper_max.jpg" alt="cooper_max.jpg" class=" drawer-palette-card__img">
+													</span>
+													<span class=" drawer-palette-card__name">Cooper Max</span>
+												</label>
+											</span>
+										</li>
+										<li class=" drawer-palette__item">
+											<span class=" drawer-palette__item-inner">
+												<label class=" drawer-palette-card">
+													<input type="radio" form="order-options-form" name="texture" class=" drawer-palette-card__input" value="Crocodile">
+													<span class=" drawer-palette-card__body">
+														<img src="img/textures/crocodile.jpg" alt="crocodile.jpg" class=" drawer-palette-card__img">
+													</span>
+													<span class=" drawer-palette-card__name">Crocodile</span>
+												</label>
+											</span>
+										</li>
+										<li class=" drawer-palette__item">
+											<span class=" drawer-palette__item-inner">
+												<label class=" drawer-palette-card">
+													<input type="radio" form="order-options-form" name="texture" class=" drawer-palette-card__input" value="Erosia Black">
+													<span class=" drawer-palette-card__body">
+														<img src="img/textures/erosia_black.jpg" alt="erosia_black.jpg" class=" drawer-palette-card__img">
+													</span>
+													<span class=" drawer-palette-card__name">Erosia Black</span>
+												</label>
+											</span>
+										</li>
+										<li class=" drawer-palette__item">
+											<span class=" drawer-palette__item-inner">
+												<label class=" drawer-palette-card">
+													<input type="radio" form="order-options-form" name="texture" class=" drawer-palette-card__input" value="Erosia Blue">
+													<span class=" drawer-palette-card__body">
+														<img src="img/textures/erosia_blue.jpg" alt="erosia_blue.jpg" class=" drawer-palette-card__img">
+													</span>
+													<span class=" drawer-palette-card__name">Erosia Blue</span>
+												</label>
+											</span>
+										</li>
+										<li class=" drawer-palette__item">
+											<span class=" drawer-palette__item-inner">
+												<label class=" drawer-palette-card">
+													<input type="radio" form="order-options-form" name="texture" class=" drawer-palette-card__input" value="Erosia Coral">
+													<span class=" drawer-palette-card__body">
+														<img src="img/textures/erosia_coral.jpg" alt="erosia_coral.jpg" class=" drawer-palette-card__img">
+													</span>
+													<span class=" drawer-palette-card__name">Erosia Coral</span>
+												</label>
+											</span>
+										</li>
+										<li class=" drawer-palette__item">
+											<span class=" drawer-palette__item-inner">
+												<label class=" drawer-palette-card">
+													<input type="radio" form="order-options-form" name="texture" class=" drawer-palette-card__input" value="Erosia Gray">
+													<span class=" drawer-palette-card__body">
+														<img src="img/textures/erosia_gray.jpg" alt="erosia_gray.jpg" class=" drawer-palette-card__img">
+													</span>
+													<span class=" drawer-palette-card__name">Erosia Gray</span>
+												</label>
+											</span>
+										</li>
+										<li class=" drawer-palette__item">
+											<span class=" drawer-palette__item-inner">
+												<label class=" drawer-palette-card">
+													<input type="radio" form="order-options-form" name="texture" class=" drawer-palette-card__input" value="Erosia Ochre">
+													<span class=" drawer-palette-card__body">
+														<img src="img/textures/erosia_ochre.jpg" alt="erosia_ochre.jpg" class=" drawer-palette-card__img">
+													</span>
+													<span class=" drawer-palette-card__name">Erosia Ochre</span>
+												</label>
+											</span>
+										</li>
+										<li class=" drawer-palette__item">
+											<span class=" drawer-palette__item-inner">
+												<label class=" drawer-palette-card">
+													<input type="radio" form="order-options-form" name="texture" class=" drawer-palette-card__input" value="Erosia White">
+													<span class=" drawer-palette-card__body">
+														<img src="img/textures/erosia_white.jpg" alt="erosia_white.jpg" class=" drawer-palette-card__img">
+													</span>
+													<span class=" drawer-palette-card__name">Erosia White</span>
+												</label>
+											</span>
+										</li>
+										<li class=" drawer-palette__item">
+											<span class=" drawer-palette__item-inner">
+												<label class=" drawer-palette-card">
+													<input type="radio" form="order-options-form" name="texture" class=" drawer-palette-card__input" value="Erosia Yellow">
+													<span class=" drawer-palette-card__body">
+														<img src="img/textures/erosia_yellow.jpg" alt="erosia_yellow.jpg" class=" drawer-palette-card__img">
+													</span>
+													<span class=" drawer-palette-card__name">Erosia Yellow</span>
+												</label>
+											</span>
+										</li>
+										<li class=" drawer-palette__item">
+											<span class=" drawer-palette__item-inner">
+												<label class=" drawer-palette-card">
+													<input type="radio" form="order-options-form" name="texture" class=" drawer-palette-card__input" value="Erosia">
+													<span class=" drawer-palette-card__body">
+														<img src="img/textures/erosia.jpg" alt="erosia.jpg" class=" drawer-palette-card__img">
+													</span>
+													<span class=" drawer-palette-card__name">Erosia</span>
+												</label>
+											</span>
+										</li>
+										<li class=" drawer-palette__item">
+											<span class=" drawer-palette__item-inner">
+												<label class=" drawer-palette-card">
+													<input type="radio" form="order-options-form" name="texture" class=" drawer-palette-card__input" value="Gold Max">
+													<span class=" drawer-palette-card__body">
+														<img src="img/textures/gold_max.jpg" alt="gold_max.jpg" class=" drawer-palette-card__img">
+													</span>
+													<span class=" drawer-palette-card__name">Gold Max</span>
+												</label>
+											</span>
+										</li>
+										<li class=" drawer-palette__item">
+											<span class=" drawer-palette__item-inner">
+												<label class=" drawer-palette-card">
+													<input type="radio" form="order-options-form" name="texture" class=" drawer-palette-card__input" value="Premium Grey">
+													<span class=" drawer-palette-card__body">
+														<img src="img/textures/premium_gray.jpg" alt="premium_gray.jpg" class=" drawer-palette-card__img">
+													</span>
+													<span class=" drawer-palette-card__name">Premium Grey</span>
+												</label>
+											</span>
+										</li>
+										<li class=" drawer-palette__item">
+											<span class=" drawer-palette__item-inner">
+												<label class=" drawer-palette-card">
+													<input type="radio" form="order-options-form" name="texture" class=" drawer-palette-card__input" value="Ribeye">
+													<span class=" drawer-palette-card__body">
+														<img src="img/textures/ribeye.jpg" alt="ribeye.jpg" class=" drawer-palette-card__img">
+													</span>
+													<span class=" drawer-palette-card__name">Ribeye</span>
+												</label>
+											</span>
+										</li>
+										<li class=" drawer-palette__item">
+											<span class=" drawer-palette__item-inner">
+												<label class=" drawer-palette-card">
+													<input type="radio" form="order-options-form" name="texture" class=" drawer-palette-card__input" value="Silver Max">
+													<span class=" drawer-palette-card__body">
+														<img src="img/textures/silver_max.jpg" alt="silver_max.jpg" class=" drawer-palette-card__img">
+													</span>
+													<span class=" drawer-palette-card__name">Silver Max</span>
+												</label>
+											</span>
+										</li>
+										<li class=" drawer-palette__item">
+											<span class=" drawer-palette__item-inner">
+												<label class=" drawer-palette-card">
+													<input type="radio" form="order-options-form" name="texture" class=" drawer-palette-card__input" value="Slanets">
+													<span class=" drawer-palette-card__body">
+														<img src="img/textures/slanets.jpg" alt="slanets.jpg" class=" drawer-palette-card__img">
+													</span>
+													<span class=" drawer-palette-card__name">Slanets</span>
+												</label>
+											</span>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class=" drawer-palette__group">
+								<h4 class=" drawer-palette__group-name">Concrete: для помещений</h4>
+								<div class=" drawer-palette__table">
+									<ul class=" drawer-palette__table-list">
+										<li class=" drawer-palette__item">
+											<span class=" drawer-palette__item-inner">
+												<label class=" drawer-palette-card">
+													<input type="radio" form="order-options-form" name="texture" class=" drawer-palette-card__input" value="Taupe Concrete">
+													<span class=" drawer-palette-card__body">
+														<img src="img/textures/taupe_concrete.jpg" alt="taupe_concrete.jpg" class=" drawer-palette-card__img">
+													</span>
+													<span class=" drawer-palette-card__name">Taupe Concrete</span>
+												</label>
+											</span>
+										</li>
+										<li class=" drawer-palette__item">
+											<span class=" drawer-palette__item-inner">
+												<label class=" drawer-palette-card">
+													<input type="radio" form="order-options-form" name="texture" class=" drawer-palette-card__input" value="Brownie">
+													<span class=" drawer-palette-card__body">
+														<img src="img/textures/brownie.jpg" alt="brownie.jpg" class=" drawer-palette-card__img">
+													</span>
+													<span class=" drawer-palette-card__name">Brownie</span>
+												</label>
+											</span>
+										</li>
+										<li class=" drawer-palette__item">
+											<span class=" drawer-palette__item-inner">
+												<label class=" drawer-palette-card">
+													<input type="radio" form="order-options-form" name="texture" class=" drawer-palette-card__input" value="Concrete Gray Dark">
+													<span class=" drawer-palette-card__body">
+														<img src="img/textures/concrete_gray_dark.jpg" alt="concrete_gray_dark.jpg" class=" drawer-palette-card__img">
+													</span>
+													<span class=" drawer-palette-card__name">Concrete Gray Dark</span>
+												</label>
+											</span>
+										</li>
+										<li class=" drawer-palette__item">
+											<span class=" drawer-palette__item-inner">
+												<label class=" drawer-palette-card">
+													<input type="radio" form="order-options-form" name="texture" class=" drawer-palette-card__input" value="Concrete Gray Light">
+													<span class=" drawer-palette-card__body">
+														<img src="img/textures/concrete_gray_light.jpg" alt="concrete_gray_light.jpg" class=" drawer-palette-card__img">
+													</span>
+													<span class=" drawer-palette-card__name">Concrete Gray Light</span>
+												</label>
+											</span>
+										</li>
+										<li class=" drawer-palette__item">
+											<span class=" drawer-palette__item-inner">
+												<label class=" drawer-palette-card">
+													<input type="radio" form="order-options-form" name="texture" class=" drawer-palette-card__input" value="Concrete M100">
+													<span class=" drawer-palette-card__body">
+														<img src="img/textures/concrete_m100.jpg" alt="concrete_m100.jpg" class=" drawer-palette-card__img">
+													</span>
+													<span class=" drawer-palette-card__name">Concrete M100</span>
+												</label>
+											</span>
+										</li>
+										<li class=" drawer-palette__item">
+											<span class=" drawer-palette__item-inner">
+												<label class=" drawer-palette-card">
+													<input type="radio" form="order-options-form" name="texture" class=" drawer-palette-card__input" value="Concrete White">
+													<span class=" drawer-palette-card__body">
+														<img src="img/textures/concrete_white.jpg" alt="concrete_white.jpg" class=" drawer-palette-card__img">
+													</span>
+													<span class=" drawer-palette-card__name">Concrete White</span>
+												</label>
+											</span>
+										</li>
+										<li class=" drawer-palette__item">
+											<span class=" drawer-palette__item-inner">
+												<label class=" drawer-palette-card">
+													<input type="radio" form="order-options-form" name="texture" class=" drawer-palette-card__input" value="Medovik">
+													<span class=" drawer-palette-card__body">
+														<img src="img/textures/medovik.jpg" alt="medovik.jpg" class=" drawer-palette-card__img">
+													</span>
+													<span class=" drawer-palette-card__name">Medovik</span>
+												</label>
+											</span>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="drawer drawer_overlapping drawer_modal" data-drawer="placement-note" data-scrollable>
+			<div class="drawer__panel">
+				<div class="drawer__inner contact-form-drawer__inner">
+					<div class="drawer__header">
+						<div class="drawer__header-inner">
+							<h2 class="drawer__title contact-form-drawer__title">Размещение:</h2>
+							<button type="button" class="contact-form-drawer__close-btn drawer__close-btn" data-drawer-close="placement-note"></button>
+						</div>
+					</div>
+					<div class="drawer__body">
+						<div class="form-msg">
+							Не все наши фактуры можно использовать на улице.
+							При выборе фактуры, обратите внимание, что некоторые линейки фактур подходят только для помещений.
+							В частности, коллекция CLASSIC подходит и для улицы, и для помещений. Все остальные фактуры рекомендуется использовать только в помещениях
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="drawer drawer_overlapping drawer_modal availability-drawer" data-drawer="availability" data-scrollable>
+			<div class="drawer__panel">
+				<div class="drawer__inner contact-form-drawer__inner">
+					<div class="drawer__header">
+						<div class="drawer__header-inner">
+							<h2 class="drawer__title contact-form-drawer__title">Наличие:</h2>
+							<button type="button" class="contact-form-drawer__close-btn drawer__close-btn" data-drawer-close="availability"></button>
+						</div>
+					</div>
+					<div class="drawer__body">
+						<dl class="flex-col gap-15 mb-15">
+							<div>
+								<dt class="availability-drawer__warehouse-name">Склад Тверь</dt>
+								<dd class="availability-drawer__warehouse-amount">0&nbsp;шт.</dd>
+							</div>
+							<div>
+								<dt class="availability-drawer__warehouse-name">Склад Москва</dt>
+								<dd class="availability-drawer__warehouse-amount">10&nbsp;шт.</dd>
+							</div>
+						</dl>
+						<p>Наиболее популярные модели кашпо мы держим в наличии на нашем складе. Если кашпо нет в наличии, или того количества, которое есть - недостаточно, то мы в течение 10-14 рабочих дней изготовим и поставим кашпо в нужном для Вас объеме.</p>
+						<p>Средний срок производства: 10 - 14 рабочих дней. Срок зависит от загруженности производства в момент размещения заказа и от объема Вашего заказа. Сделайте заказ на сайте, и при подтверждении заказа мы обозначим точный срок изготовления или спросите у наших менеджеров любым удобным способом.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="drawer drawer_overlapping drawer_modal quick-cart-drawer" data-drawer="quick-cart" data-scrollable>
+			<div class="drawer__panel">
+				<div class="drawer__inner contact-form-drawer__inner">
+					<div class="drawer__header">
+						<div class="drawer__header-inner">
+							<h2 class="drawer__title contact-form-drawer__title">Товар в корзине</h2>
+							<button type="button" class="contact-form-drawer__close-btn drawer__close-btn" data-drawer-close="quick-cart"></button>
+						</div>
+					</div>
+					<div class="drawer__body">
+						<ul class="flex-col py-10 border-bot-gray border-top-gray">
+							<li class="selected-product selected-product_quick-cart">
+								<div class="selected-product__img-area">
+									<img src="img/product-card/selection-thumbs/001.jpg" alt="Selection img" class="selected-product__img">
+								</div>
+								<span class="selected-product__name">Cone Cobalt Blue 38 х 41</span>
+								<div class="selected-product__amount-select-area">
+									<div class="amount-select amount-select_foldable">
+										<button type="button" class="amount-select__btn amount-select__btn_dec"></button>
+										<input type="number" pattern="\d+" class="amount-select__input" value="0">
+										<button type="button" class="amount-select__btn amount-select__btn_inc"></button>
+									</div>
+								</div>
+								<span class="selected-product__price-area">
+									<span class="selected-product__price">5&nbsp;600&nbsp;₽</span>
+								</span>
+							</li>
+							<li class="selected-product selected-product_quick-cart">
+								<div class="selected-product__img-area">
+									<img src="img/product-card/selection-thumbs/002.jpg" alt="Selection img" class="selected-product__img">
+								</div>
+								<span class="selected-product__name">Cone Cobalt Blue 38 х 41</span>
+								<div class="selected-product__amount-select-area">
+									<div class="amount-select amount-select_foldable">
+										<button type="button" class="amount-select__btn amount-select__btn_dec"></button>
+										<input type="number" pattern="\d+" class="amount-select__input" value="0">
+										<button type="button" class="amount-select__btn amount-select__btn_inc"></button>
+									</div>
+								</div>
+								<span class="selected-product__price-area">
+									<span class="selected-product__price">5&nbsp;600&nbsp;₽</span>
+								</span>
+							</li>
+						</ul>
+						<div>
+							<div class="products-summary products-summary_right">
+								<span class="products-summary__label">Итого</span>
+								<span class="products-summary__price">11 200 ₽</span>
+							</div>
+							<div class="quick-cart-drawer__btns">
+								<a href="./cart.html" class="quick-cart-drawer__complete-btn btn btn_black">Оформить заказ</a>
+								<button type="button" class="quick-cart-drawer__continue-btn btn btn_clear" data-drawer-close="quick-cart">Продолжить покупки</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Дровер предпросмотра (thumbs) образцов коллекции -->
+		<div class="drawer drawer_overlapping drawer_right samples-thumbs-drawer shape-samples-thumbs-drawer" data-drawer="shape-samples-thumbs" data-scrollable>
+			<div class="drawer__panel">
+				<div class="drawer__inner drawer__inner_spaced">
+					<div class="drawer__header drawer__header_separated">
+						<div class="drawer__header-inner samples-thumbs-drawer__header-inner">
+							<h2 class="drawer__title samples-thumbs-drawer__title">Cone</h2>
+							<button type="button" class="drawer__close-btn" data-drawer-close="shape-samples-thumbs"></button>
+						</div>
+					</div>
+					<div class="drawer__body">
+						<div class="samples-thumbs-drawer__gallery-thumbs swiper shape-samples-thumbs-drawer__slider">
+							<div class="swiper-wrapper samples-thumbs-drawer__gallery-thumbs-wrap">
+								<div class="swiper-slide">
+									<img src="img/projects/thumbs/012.jpg" alt="">
+								</div>
+								<div class="swiper-slide">
+									<img src="img/projects/thumbs/011.jpg" alt="">
+								</div>
+								<div class="swiper-slide">
+									<img src="img/projects/thumbs/009.jpg" alt="">
+								</div>
+								<div class="swiper-slide">
+									<img src="img/projects/thumbs/015.jpg" alt="">
+								</div>
+								<div class="swiper-slide">
+									<img src="img/projects/thumbs/014.jpg" alt="">
+								</div>
+								<div class="swiper-slide">
+									<img src="img/projects/thumbs/013.jpg" alt="">
+								</div>
+								<div class="swiper-slide">
+									<img src="img/projects/thumbs/016.jpg" alt="">
+								</div>
+								<div class="swiper-slide">
+									<img src="img/projects/thumbs/010.jpg" alt="">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Дровер образцов коллекции -->
+		<div class="drawer drawer_modal samples-gallery-drawer shape-samples-gallery-drawer" data-drawer="shape-samples-gallery" data-scrollable>
+			<button type="button" class="drawer__close-btn samples-gallery-drawer__close-btn" data-drawer-close="shape-samples-gallery"></button>
+			<div class="drawer__panel samples-gallery-drawer__panel">
+				<div class="drawer__inner drawer__inner_spaced samples-gallery-drawer__inner">
+					<div class="drawer__body samples-gallery-drawer__body">
+						<div class="projects-gallery__slider shape-samples-gallery-drawer__slider samples-gallery samples-gallery-drawer__slider swiper">
+							<div class="projects-gallery__prev-btn main-gallery__prev-btn samples-gallery__prev-btn swiper-btn swiper-btn_prev shape-samples-gallery-drawer__prev-btn">
+								<svg viewbox="0 0 22 17">
+									<use xlink:href='img/icons/icons.svg#nav-arrow-left'></use>
+								</svg>
+							</div>
+							<div class="projects-gallery__next-btn main-gallery__next-btn samples-gallery__next-btn swiper-btn swiper-btn_next shape-samples-gallery-drawer__next-btn">
+								<svg viewbox="0 0 22 17">
+									<use xlink:href='img/icons/icons.svg#nav-arrow-left'></use>
+								</svg>
+							</div>
+							<div class="swiper-wrapper">
+								<div class="swiper-slide projects-gallery__slide samples-gallery__slide" data-products='[{"title":"Devider Erosia Yellow L80 W30 H50","href":"/shop","price":"30 000 ₽"},{"title":"Сube Erosia Yellow L50 W50 H50","href":"/shop","price":"30 000 ₽"}]'>
+									<img src="img/projects/full-size/012.jpg" alt="Collection" loading="lazy" class="projects-gallery__slide-img samples-gallery__slide-img">
+									<div class="swiper-lazy-preloader"></div>
+								</div>
+								<div class="swiper-slide projects-gallery__slide samples-gallery__slide" data-products='[{"title":"Devider Erosia Red L80 W30 H50","href":"/shop","price":"30 000 ₽"},{"title":"Justa a test L50 W50 H50","href":"/shop","price":"30 000 ₽"}]'>
+									<img src="img/projects/full-size/011.jpg" alt="Collection" loading="lazy" class="projects-gallery__slide-img samples-gallery__slide-img">
+									<div class="swiper-lazy-preloader"></div>
+								</div>
+								<div class="swiper-slide projects-gallery__slide" data-products='[{"title":"Devider Erosia Yellow L80 W30 H50","href":"/shop","price":"30 000 ₽"},{"title":"Сube Erosia Yellow L50 W50 H50","href":"/shop","price":"30 000 ₽"}]'>
+									<img src="img/projects/full-size/009.jpg" alt="Collection" loading="lazy" class="projects-gallery__slide-img samples-gallery__slide-img">
+									<div class="swiper-lazy-preloader"></div>
+								</div>
+								<div class="swiper-slide projects-gallery__slide" data-products='[{"title":"Devider Erosia Yellow L80 W30 H50","href":"/shop","price":"30 000 ₽"},{"title":"Сube Erosia Yellow L50 W50 H50","href":"/shop","price":"30 000 ₽"}]'>
+									<img src="img/projects/full-size/015.jpg" alt="Collection" loading="lazy" class="projects-gallery__slide-img samples-gallery__slide-img">
+									<div class="swiper-lazy-preloader"></div>
+								</div>
+								<div class="swiper-slide projects-gallery__slide" data-products='[{"title":"Devider Erosia Yellow L80 W30 H50","href":"/shop","price":"30 000 ₽"},{"title":"Сube Erosia Yellow L50 W50 H50","href":"/shop","price":"30 000 ₽"}]'>
+									<img src="img/projects/full-size/014.jpg" alt="Collection" loading="lazy" class="projects-gallery__slide-img samples-gallery__slide-img">
+									<div class="swiper-lazy-preloader"></div>
+								</div>
+								<div class="swiper-slide projects-gallery__slide" data-products='[{"title":"Devider Erosia Yellow L80 W30 H50","href":"/shop","price":"30 000 ₽"},{"title":"Сube Erosia Yellow L50 W50 H50","href":"/shop","price":"30 000 ₽"}]'>
+									<img src="img/projects/full-size/013.jpg" alt="Collection" loading="lazy" class="projects-gallery__slide-img samples-gallery__slide-img">
+									<div class="swiper-lazy-preloader"></div>
+								</div>
+								<div class="swiper-slide projects-gallery__slide" data-products='[{"title":"Devider Erosia Yellow L80 W30 H50","href":"/shop","price":"30 000 ₽"},{"title":"Сube Erosia Yellow L50 W50 H50","href":"/shop","price":"30 000 ₽"}]'>
+									<img src="img/projects/full-size/016.jpg" alt="Collection" loading="lazy" class="projects-gallery__slide-img samples-gallery__slide-img">
+									<div class="swiper-lazy-preloader"></div>
+								</div>
+								<div class="swiper-slide projects-gallery__slide" data-products='[{"title":"Devider Erosia Yellow L80 W30 H50","href":"/shop","price":"30 000 ₽"},{"title":"Сube Erosia Yellow L50 W50 H50","href":"/shop","price":"30 000 ₽"}]'>
+									<img src="img/projects/full-size/010.jpg" alt="Collection" loading="lazy" class="projects-gallery__slide-img samples-gallery__slide-img">
+									<div class="swiper-lazy-preloader"></div>
+								</div>
+							</div>
+						</div>
+						<div class="projects-gallery__product-select product-select shape-samples-product-select">
+							<div class="product-select__prev-btn-area">
+								<div class="product-select__prev-btn shape-samples-product-select__prev-btn">
+									<svg viewbox="0 0 22 17">
+										<use xlink:href='img/icons/icons.svg#nav-arrow-left'></use>
+									</svg>
+								</div>
+							</div>
+							<div class="product-select__slider shape-samples-product-select__slider swiper">
+								<div class="swiper-wrapper">
+									<a href="" target="_blank" class="swiper-slide product-select__link">
+										Devider Erosia Yellow L80 W30 H50
+									</a>
+									<a href="" target="_blank" class="swiper-slide product-select__link">
+										Сube Erosia Yellow L50 W50 H50
+									</a>
+								</div>
+							</div>
+							<div class="product-select__next-btn-area">
+								<div class="product-select__next-btn shape-samples-product-select__next-btn">
+									<svg viewbox="0 0 22 17">
+										<use xlink:href='img/icons/icons.svg#nav-arrow-left'></use>
+									</svg>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Дровер предпросмотра (thumbs)  текстур коллекции -->
+		<div class="drawer drawer_overlapping drawer_right samples-thumbs-drawer texture-samples-thumbs-drawer" data-drawer="texture-samples-thumbs" data-scrollable>
+			<div class="drawer__panel">
+				<div class="drawer__inner drawer__inner_spaced">
+					<div class="drawer__header drawer__header_separated">
+						<div class="drawer__header-inner samples-thumbs-drawer__header-inner">
+							<h2 class="drawer__title samples-thumbs-drawer__title">Terracota</h2>
+							<button type="button" class="drawer__close-btn" data-drawer-close="texture-samples-thumbs"></button>
+						</div>
+					</div>
+					<div class="drawer__body">
+						<div class="samples-thumbs-drawer__gallery-thumbs swiper texture-samples-thumbs-drawer__slider">
+							<div class="swiper-wrapper samples-thumbs-drawer__gallery-thumbs-wrap">
+								<div class="swiper-slide">
+									<img src="img/projects/thumbs/012.jpg" alt="">
+								</div>
+								<div class="swiper-slide">
+									<img src="img/projects/thumbs/011.jpg" alt="">
+								</div>
+								<div class="swiper-slide">
+									<img src="img/projects/thumbs/009.jpg" alt="">
+								</div>
+								<div class="swiper-slide">
+									<img src="img/projects/thumbs/015.jpg" alt="">
+								</div>
+								<div class="swiper-slide">
+									<img src="img/projects/thumbs/014.jpg" alt="">
+								</div>
+								<div class="swiper-slide">
+									<img src="img/projects/thumbs/013.jpg" alt="">
+								</div>
+								<div class="swiper-slide">
+									<img src="img/projects/thumbs/016.jpg" alt="">
+								</div>
+								<div class="swiper-slide">
+									<img src="img/projects/thumbs/010.jpg" alt="">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Дровер текстур коллекции -->
+		<div class="drawer drawer_modal samples-gallery-drawer texture-samples-gallery-drawer" data-drawer="texture-samples-gallery" data-scrollable>
+			<button type="button" class="drawer__close-btn samples-gallery-drawer__close-btn" data-drawer-close="texture-samples-gallery"></button>
+			<div class="drawer__panel samples-gallery-drawer__panel">
+				<div class="drawer__inner drawer__inner_spaced samples-gallery-drawer__inner">
+					<div class="drawer__body samples-gallery-drawer__body">
+						<div class="projects-gallery__slider texture-samples-gallery-drawer__slider samples-gallery samples-gallery-drawer__slider swiper">
+							<div class="projects-gallery__prev-btn main-gallery__prev-btn samples-gallery__prev-btn swiper-btn swiper-btn_prev">
+								<svg viewbox="0 0 22 17">
+									<use xlink:href='img/icons/icons.svg#nav-arrow-left'></use>
+								</svg>
+							</div>
+							<div class="projects-gallery__next-btn main-gallery__next-btn samples-gallery__next-btn swiper-btn swiper-btn_next">
+								<svg viewbox="0 0 22 17">
+									<use xlink:href='img/icons/icons.svg#nav-arrow-left'></use>
+								</svg>
+							</div>
+							<div class="swiper-wrapper">
+								<div class="swiper-slide projects-gallery__slide samples-gallery__slide" data-products='[{"title":"Devider Erosia Yellow L80 W30 H50","href":"/shop","price":"30 000 ₽"},{"title":"Сube Erosia Yellow L50 W50 H50","href":"/shop","price":"30 000 ₽"}]'>
+									<img src="img/projects/full-size/012.jpg" alt="Collection" loading="lazy" class="projects-gallery__slide-img samples-gallery__slide-img">
+									<div class="swiper-lazy-preloader"></div>
+								</div>
+								<div class="swiper-slide projects-gallery__slide samples-gallery__slide" data-products='[{"title":"Devider Erosia Red L80 W30 H50","href":"/shop","price":"30 000 ₽"},{"title":"Justa a test L50 W50 H50","href":"/shop","price":"30 000 ₽"}]'>
+									<img src="img/projects/full-size/011.jpg" alt="Collection" loading="lazy" class="projects-gallery__slide-img samples-gallery__slide-img">
+									<div class="swiper-lazy-preloader"></div>
+								</div>
+								<div class="swiper-slide projects-gallery__slide" data-products='[{"title":"Devider Erosia Yellow L80 W30 H50","href":"/shop","price":"30 000 ₽"},{"title":"Сube Erosia Yellow L50 W50 H50","href":"/shop","price":"30 000 ₽"}]'>
+									<img src="img/projects/full-size/009.jpg" alt="Collection" loading="lazy" class="projects-gallery__slide-img samples-gallery__slide-img">
+									<div class="swiper-lazy-preloader"></div>
+								</div>
+								<div class="swiper-slide projects-gallery__slide" data-products='[{"title":"Devider Erosia Yellow L80 W30 H50","href":"/shop","price":"30 000 ₽"},{"title":"Сube Erosia Yellow L50 W50 H50","href":"/shop","price":"30 000 ₽"}]'>
+									<img src="img/projects/full-size/015.jpg" alt="Collection" loading="lazy" class="projects-gallery__slide-img samples-gallery__slide-img">
+									<div class="swiper-lazy-preloader"></div>
+								</div>
+								<div class="swiper-slide projects-gallery__slide" data-products='[{"title":"Devider Erosia Yellow L80 W30 H50","href":"/shop","price":"30 000 ₽"},{"title":"Сube Erosia Yellow L50 W50 H50","href":"/shop","price":"30 000 ₽"}]'>
+									<img src="img/projects/full-size/014.jpg" alt="Collection" loading="lazy" class="projects-gallery__slide-img samples-gallery__slide-img">
+									<div class="swiper-lazy-preloader"></div>
+								</div>
+								<div class="swiper-slide projects-gallery__slide" data-products='[{"title":"Devider Erosia Yellow L80 W30 H50","href":"/shop","price":"30 000 ₽"},{"title":"Сube Erosia Yellow L50 W50 H50","href":"/shop","price":"30 000 ₽"}]'>
+									<img src="img/projects/full-size/013.jpg" alt="Collection" loading="lazy" class="projects-gallery__slide-img samples-gallery__slide-img">
+									<div class="swiper-lazy-preloader"></div>
+								</div>
+								<div class="swiper-slide projects-gallery__slide" data-products='[{"title":"Devider Erosia Yellow L80 W30 H50","href":"/shop","price":"30 000 ₽"},{"title":"Сube Erosia Yellow L50 W50 H50","href":"/shop","price":"30 000 ₽"}]'>
+									<img src="img/projects/full-size/016.jpg" alt="Collection" loading="lazy" class="projects-gallery__slide-img samples-gallery__slide-img">
+									<div class="swiper-lazy-preloader"></div>
+								</div>
+								<div class="swiper-slide projects-gallery__slide" data-products='[{"title":"Devider Erosia Yellow L80 W30 H50","href":"/shop","price":"30 000 ₽"},{"title":"Сube Erosia Yellow L50 W50 H50","href":"/shop","price":"30 000 ₽"}]'>
+									<img src="img/projects/full-size/010.jpg" alt="Collection" loading="lazy" class="projects-gallery__slide-img samples-gallery__slide-img">
+									<div class="swiper-lazy-preloader"></div>
+								</div>
+							</div>
+						</div>
+						<div class="projects-gallery__product-select product-select texture-samples-product-select">
+							<div class="product-select__prev-btn-area">
+								<div class="product-select__prev-btn texture-samples-product-select__prev-btn">
+									<svg viewbox="0 0 22 17">
+										<use xlink:href='img/icons/icons.svg#nav-arrow-left'></use>
+									</svg>
+								</div>
+							</div>
+							<div class="product-select__slider swiper texture-samples-product-select__slider">
+								<div class="swiper-wrapper">
+									<a href="" target="_blank" class="swiper-slide product-select__link">
+										Devider Erosia Yellow L80 W30 H50
+									</a>
+									<a href="" target="_blank" class="swiper-slide product-select__link">
+										Сube Erosia Yellow L50 W50 H50
+									</a>
+								</div>
+							</div>
+							<div class="product-select__next-btn-area">
+								<div class="product-select__next-btn texture-samples-product-select__next-btn">
+									<svg viewbox="0 0 22 17">
+										<use xlink:href='img/icons/icons.svg#nav-arrow-left'></use>
+									</svg>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<script src="libs/tua-bsl.umd.js?_v=20230601122951"></script>
+	<script src="js/common.min.js?_v=20230601122951"></script>
+	<script src="js/product-card.min.js?_v=20230601122951"></script>
+</body>
+
+</html>

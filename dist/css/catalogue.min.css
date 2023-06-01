@@ -1,0 +1,32 @@
+.page__info-area {
+  overflow: hidden;
+}
+@media (max-width: 992px) {
+  .page__info-area {
+    height: auto;
+  }
+}
+
+.section-slider {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+@media (max-width: 992px) {
+  .section-slider__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.main-gallery__slide:nth-child(1) > img {
+  object-position: center right;
+}
+.main-gallery__slide:nth-child(2) > img {
+  object-position: bottom left;
+}
+.main-gallery__slide:nth-child(3) > img {
+  object-position: top left;
+}
+.main-gallery__slide:nth-child(4) > img {
+  object-position: top right;
+}

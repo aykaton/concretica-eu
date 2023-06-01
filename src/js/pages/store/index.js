@@ -71,7 +71,6 @@ function getTextureChangeHandler() {
 		cloneChange(newValue);
 	}
 	function cloneChange(newValue) {
-			console.log("cloneChange", newValue);
 		if (newValue && newValue in clonesMap) {
 			document.forms["products-filter-form"]["texture-clone"].value = newValue;
 		} else {
@@ -738,7 +737,6 @@ function initAppliedFiltersRendering() {
 	render();
 
 	function render(initInputName) {
-			console.log(applied);
 		let itemMeta = schema.head;
 		do {
 			if (initInputName && itemMeta.relatedOn.indexOf(initInputName) === -1) continue;
@@ -815,6 +813,7 @@ function initCatalogue() {
 	const productsPerPage = 4;
 	let latestFilters = collectFilters(), previousFilters;
 	const catalogueData = signal({
+		loading: false,
 		onPage: [],
 		totalNumber: 0,
 	});
@@ -913,6 +912,9 @@ function initCatalogue() {
 		const dispatchFiltersReset = () => {
 			document.dispatchEvent(new CustomEvent("resetFilters"));
 		}
+		if (catalogueData.value.loading) {
+			return html`<div class="catalogue__loading-screen"><div class="loading-spinner">Loading...</div></div>`;
+		}
 		return html`<${Fragment}>
 									<div class="catalogue__no-products">
 										${catalogueData.value.totalNumber === 0 && html`<p class="catalogue__no-products-text">Нет товаров, соответствующих данным критериям. 
@@ -938,15 +940,16 @@ function initCatalogue() {
 								</${Fragment}>`;
 	}
 	const requestAndSetData = _.debounce((previousFilters, filters, page) => {
+		catalogueData.value = { ...catalogueData.value, loading: true };
 		requestCatalogueData(filters, productsPerPage, page)
 			.then(result => {
 				if (result.onPage.length === 0 && result.totalNumber > 0) {
-						requestCatalogueData(filters, productsPerPage, Math.floor(result.totalNumber / productsPerPage))
+						requestCatalogueData(filters, productsPerPage, Math.ceil(result.totalNumber / productsPerPage))
 							.then(result => {
-								catalogueData.value = result;
+								catalogueData.value = { ...result, loading: false };
 							});
 				} else {
-					catalogueData.value = result;
+					catalogueData.value = { ...result, loading: false };
 				}
 			})
 			.catch(reason => {

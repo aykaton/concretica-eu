@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Order confirmation</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel='stylesheet' href='css/libs/countrySelect.min.css?_v=20230601122951'>
+	<link rel='stylesheet' href='css/libs/intlTelInput.min.css?_v=20230601122951'>
+	<link rel='stylesheet' href='css/common.min.css?_v=20230601122951'>
+	<link rel='stylesheet' href='css/order-confirmation.min.css?_v=20230601122951'>
+	<!-- <link rel="stylesheet" href="css/swiper-bundle.min.css?_v=20230601122951"> -->
+	<script defer src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js?_v=20230601122951'></script>
+	<script defer src='js/libs/countrySelect.min.js?_v=20230601122951'></script>
+	<script defer src='js/libs/intlTelInput.min.js?_v=20230601122951'></script>
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		@import url(https://fonts.googleapis.com/css?family=Roboto:300,regular,500,);
+		@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,regular,600,700);
+	</style>
+	<script>
+		window.onerror = function(message, url, line, col, errorObj) {
+			alert(`${message}\n${url}, ${line}:${col}`);
+		};
+	</script>
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header header_left">
+			<div class="header__container">
+				<div class="header__logo-wrap">
+					<figure class="header__logo logo">
+						<a href="/"><img src="img/logo.svg" alt="Logo"></a>
+					</figure>
+				</div>
+				<div class="header__contacts-btn-area" data-portal-dest="contacts-btn"></div>
+				<div class="header__cart-area" data-portal-dest="shop-cart"></div>
+				<div class="header__menu-area" data-portal-dest="main-menu">
+				</div>
+			</div>
+		</header>
+		<div class="inner">
+			<main class="page">
+				<section id="scrollable" class="section-slider swiper">
+					<div class="swiper-wrapper section-slider__wrapper">
+						<div class="swiper-slide page__info-area">
+							<section class="content order-confirmation">
+								<div class="content__container order-confirmation__container">
+									<form id="order-confirmation-form" name="order-confirmation" class="order-confirmation__form" novalidate>
+										<div class="order-confirmation__header">
+											<a href="./cart.html" class="order-confirmation__back-btn hoverable" data-step="1">
+												<svg class="" viewbox="0 0 22 17">
+													<use xlink:href='img/icons/icons.svg#nav-arrow-left'></use>
+												</svg>
+												Back
+											</a>
+											<button type="button" class="order-confirmation__back-btn hoverable quiz-step-btn" data-prev-step-btn data-step="2, 3">
+												<svg class="" viewbox="0 0 22 17">
+													<use xlink:href='img/icons/icons.svg#nav-arrow-left'></use>
+												</svg>
+												Back
+											</button>
+											<h1 class="content__title section-title order-confirmation__title">order confirmation</h1>
+											<div class="quiz-step-indicator">
+												Шаг <span id="quiz-current-step" class="quiz-step-indicator__current">1</span> из <span class="quiz-step-indicator__total">3</span>
+											</div>
+										</div>
+										<div class="form-section order-confirmation__section" data-step="1">
+											<div class="form-section__header">
+												<h3 class="form-section__title">
+													Плательщик
+												</h3>
+											</div>
+											<div class="flex-row">
+												<div class="form-radio-input mr-70">
+													<label class="form-radio-input__checkbox">
+														<input id="organization-type--private" type="radio" name="organization-type" value="private" checked>
+														<span class="form-radio-input__body"></span>
+													</label>
+													<label for="organization-type--private" class="form-radio-input__label">
+														Физ.лицо
+													</label>
+												</div>
+												<div class="form-radio-input">
+													<label class="form-radio-input__checkbox">
+														<input id="organization-type--corporate" type="radio" name="organization-type" value="corporate">
+														<span class="form-radio-input__body"></span>
+													</label>
+													<label for="organization-type--corporate" class="form-radio-input__label">
+														Юр.лицо
+													</label>
+												</div>
+											</div>
+										</div>
+										<div class="form-section order-confirmation__section" data-step="1">
+											<div class="form-section__header">
+												<h3 class="form-section__title">
+													Контактная информация
+												</h3>
+											</div>
+											<div class="form-section__body">
+												<div class="form__field field">
+													<label class="field__label">
+														Имя*
+													</label>
+													<input type="text" name="name" class="field__input form-input" placeholder="Enter your name"></input>
+													<span class="field__error" data-alias="required">Введите имя</span>
+												</div>
+												<!-- Phone -->
+												<div class="form__field field">
+													<label class="field__label">
+														Телефон*
+													</label>
+													<input id="phone-input" type="tel" name="phone" class="form-input field__input w-100p"></input>
+													<span class="field__error" data-alias="required" data-method="callback">Введите номер телефона</span>
+													<span class="field__error" data-alias="valid" data-method="callback">Номер телефона введен не корректно</span>
+												</div>
+												<div class="form__field field" data-name="email">
+													<label class="field__label">
+														E-mail*
+													</label>
+													<input type="email" name="email" class="field__input form-input" placeholder="Enter an e-mail"></input>
+													<span class="field__error" data-alias="required">Введите e-mail</span>
+													<span class="field__error" data-alias="email">Некорректные данные</span>
+												</div>
+												<!-- Language -->
+												<div class="form__field field">
+													<label class="field__label">
+														Язык общения*
+													</label>
+													<select name="language" id="language-select" class="field__input" data-class="field__v-input w-100p" data-placeholder="Выберите язык общения">
+														<option value="en" selected>Английский</option>
+														<option value="it">Итальянский</option>
+														<option value="ru">Русский</option>
+													</select>
+												</div>
+											</div>
+										</div>
+										<!-- Organization -->
+										<div id="organization-info" class="form-section order-confirmation__section" data-step="1">
+											<div class="form-section__header">
+												<h3 class="form-section__title">
+													Данные организации
+												</h3>
+											</div>
+											<div class="form-section__body">
+												<div class="form__field field">
+													<label class="field__label">
+														Название компании*
+													</label>
+													<input type="text" name="company-name" class="field__input form-input" placeholder="Введите название"></input>
+													<span class="field__error" data-alias="required">Введите название</span>
+												</div>
+												<div class="form__field field" data-name="email">
+													<label class="field__label">
+														VAT номер / сайт*
+													</label>
+													<input type="text" name="vat" class="field__input form-input" placeholder="Введите VAT номер или адрес сайта"></input>
+													<span class="field__error" data-alias="required">Введите VAT номер или адрес сайта</span>
+												</div>
+											</div>
+										</div>
+										<div class="form-section order-confirmation__section" data-step="1">
+											<div class="form-section__header">
+												<h3 class="form-section__title">
+													Информация о доставке
+												</h3>
+											</div>
+											<div class="form-section__body">
+												<div class="form__field field">
+													<label class="field__label">
+														фио получателя*
+													</label>
+													<input type="text" name="full-name" class="field__input form-input" placeholder="ФИО по паспорту"></input>
+													<span class="field__error" data-alias="required">Введите ваши ФИО</span>
+												</div>
+												<!-- Country -->
+												<div class="form__field field">
+													<label class="field__label">
+														Страна*
+													</label>
+													<select name="country" id="country-select" class="field__input" data-class="field__v-input w-100p" data-placeholder="Выберите страну">
+														<option value="ae" selected data-flag-img-src="img/country-flags/ae.jpg">ОАЭ</option>
+														<option value="rs" data-flag-img-src="img/country-flags/rs.jpg">Сербия</option>
+														<option value="it" data-flag-img-src="img/country-flags/it.jpg">Италия</option>
+													</select>
+												</div>
+												<div class="form__field field" data-name="email">
+													<label class="field__label">
+														Город*
+													</label>
+													<input type="text" name="city" id="city-select" class="field__input" placeholder="Выберите ваш город"></input>
+													<span class="field__error" data-alias="required">Выберите ваш город</span>
+												</div>
+												<div class="form__field field" data-name="email">
+													<label class="field__label">
+														Улица*
+													</label>
+													<input type="text" name="street" class="field__input form-input" placeholder="Название улицы"></input>
+													<span class="field__error" data-alias="required">Введите название улицы</span>
+												</div>
+												<div class="form__field field" data-name="email">
+													<label class="field__label">
+														Дом
+													</label>
+													<input type="text" name="building" class="field__input form-input" placeholder="Номер дома"></input>
+												</div>
+												<div class="form__field field" data-name="email">
+													<label class="field__label">
+														Почтовый код
+													</label>
+													<input type="text" name="post-code" class="field__input form-input" placeholder="Номер кода"></input>
+												</div>
+											</div>
+										</div>
+										<div class="form-section" data-step="2">
+											<div class="form-section__header">
+												<h3 class="form-section__title">
+													Способ оплаты
+												</h3>
+											</div>
+											<div class="flex-col gap-imit-25">
+												<div class="form-radio-input form-radio-input_with-remark">
+													<label>
+														<input id="payment-method--cash-abroad" type="radio" name="payment-method" value="cash-abroad">
+														<span class="form-radio-input__body"></span>
+													</label>
+													<label for="payment-method--cash-abroad" class="form-radio-input__label">
+														Cash in advance abroad
+													</label>
+													<span class="form-radio-input__remark">Attention: There are no shipping costs for your country. These will be communicated to you separately in an offer. To enable us to make you an offer, click on order subject to payment (This does not constitute a purchase contract!). Our sales team will contact you as soon as possible.</span>
+												</div>
+												<div class="form-radio-input">
+													<label>
+														<input id="payment-method--cash-and-card" type="radio" name="payment-method" value="cash-and-card" checked>
+														<span class="form-radio-input__body"></span>
+													</label>
+													<label for="payment-method--cash-and-card" class="form-radio-input__label">
+														Payment on collection (cash and EC card)
+													</label>
+												</div>
+												<div class="form-radio-input">
+													<label class="form-radio-input__checkbox">
+														<input id="payment-method--account" type="radio" name="payment-method" value="account">
+														<span class="form-radio-input__body"></span>
+													</label>
+													<label for="payment-method--account" class="form-radio-input__label">
+														Purchase on account, credit card, Sepa direct debit and PayPal powered by PayPal
+													</label>
+												</div>
+											</div>
+										</div>
+										<div class="form-section" data-step="1">
+											<div class="form-section__header">
+												<h3 class="form-section__title">
+													Дополнительно
+												</h3>
+											</div>
+											<textarea name="message" class="form-input form-input_textarea w-100p" placeholder="Комментарий к заказу"></textarea>
+										</div>
+										<div class="order-confirmation-summary" data-portal-src="order-summary" data-portal-media="(min-width: 993px)" data-step="3">
+											<div class="order-confirmation-summary__info form-section">
+												<div class="form-section__header order-confirmation-summary__info-header order-confirmation-summary__info-header_mob-plus">
+													<h4 class="form-section__title">Состав заказа</h4>
+													<button type="button" class="form-section__edit-btn hoverable hoverable_underline-in color-orange" data-order-change-btn>Изменить</button>
+												</div>
+												<div class="form-section__header order-confirmation-summary__info-header order-confirmation-summary__info-header_mob">
+													<h4 class="form-section__title">Подтверждение заказа</h4>
+												</div>
+												<dl class="cart-summary">
+													<div>
+														<dt>Вес заказа:</dt>
+														<dd class="cart-summary__value">1300 кг</dd>
+													</div>
+													<div>
+														<dt>Товары (<span class="">14</span>):</dt>
+														<dd class="cart-summary__value">126 240 ₽</dd>
+													</div>
+													<div>
+														<dt>Скидка на товары:</dt>
+														<dd class="cart-summary__value cart-summary__discount">2 000 ₽</dd>
+													</div>
+													<div class="cart-summary__total">
+														<dt>Итого:</dt>
+														<dd class="cart-summary__total-value">124 240 ₽</dd>
+													</div>
+												</dl>
+											</div>
+											<div class="order-confirmation-summary__list form-section">
+												<div class="form-section__header order-confirmation-summary__list-header">
+													<h4 class="form-section__title">Состав заказа</h4>
+													<button type="button" class="form-section__edit-btn hoverable hoverable_underline-in color-orange" data-order-change-btn>Изменить</button>
+												</div>
+												<ul class="overflow-y-auto">
+													<li class="cart-summary-product">
+														<img src="img/product-card/selection-thumbs/001.jpg" alt="Selection img" class="cart-summary-product__img">
+														<span class="cart-summary-product__name">Cone Cobalt Blue 38 х 41</span>
+														<div class="cart-summary-product__amount">1 шт.</div>
+													</li>
+													<li class="cart-summary-product">
+														<img src="img/product-card/selection-thumbs/001.jpg" alt="Selection img" class="cart-summary-product__img">
+														<span class="cart-summary-product__name">Cone Cobalt Blue 38 х 41</span>
+														<div class="cart-summary-product__amount">1 шт.</div>
+													</li>
+													<li class="cart-summary-product">
+														<img src="img/product-card/selection-thumbs/001.jpg" alt="Selection img" class="cart-summary-product__img">
+														<span class="cart-summary-product__name">Cone Cobalt Blue 38 х 41</span>
+														<div class="cart-summary-product__amount">1 шт.</div>
+													</li>
+												</ul>
+											</div>
+											<div class="order-confirmation-summary__customer-input-summary form-section">
+												<div class="form-section__header">
+													<h4 class="form-section__title">Подробности</h4>
+													<button type="button" class="form-section__edit-btn hoverable hoverable_underline-in color-orange" data-to-start-btn>Изменить</button>
+												</div>
+												<dl class="flex-col gap-imit-15">
+													<div class="order-info-item">
+														<dt>Плательщик</dt>
+														<dd id="customer-input-summary--type">Физ. лицо</dd>
+													</div>
+													<div class="order-info-item">
+														<dt>Контактная информация</dt>
+														<dd id="customer-input-summary--info">
+															<p>Александр</p>
+															<p>+9712720717</p>
+															<p>alexander1983@gmail.com</p>
+															<p>Английский</p>
+														</dd>
+													</div>
+													<div class="order-info-item">
+														<dt>Информация о доставке</dt>
+														<dd id="customer-input-summary--shipping-address">
+															<p>Александр Макдоналд</p>
+															<p>ОАЭ, Дубаи, ул. Эль Бада, д. 80, 071405</p>
+														</dd>
+													</div>
+													<div class="order-info-item">
+														<dt>Способ оплаты</dt>
+														<dd id="customer-input-summary--payment-method">
+															Payment on collection (cash and EC card)
+														</dd>
+													</div>
+												</dl>
+											</div>
+											<button form="order-confirmation-form" type="submit" class="order-confirmation-summary__btn btn btn_black" data-step="3" tabindex="100">Оформить</button>
+											<button type="button" class="text-btn hoverable quiz-step-btn align-self-center" data-step="3" data-prev-step-btn>Вернуться назад</button>
+										</div>
+										<div class="flex-col gap-imit-20">
+											<button type="button" class="btn btn_small btn_black quiz-step-btn" data-step="1" data-next-step-btn>Продожить</button>
+											<button type="button" class="btn btn_small btn_black quiz-step-btn" data-step="2" data-next-step-btn>Продожить</button>
+											<a href="./cart.html" class="text-btn hoverable quiz-step-btn align-self-center" data-step="1">Вернуться назад</a>
+											<button type="button" class="text-btn hoverable quiz-step-btn align-self-center" data-step="2" data-prev-step-btn>Вернуться назад</button>
+										</div>
+									</form>
+								</div>
+							</section>
+						</div>
+						<div class="swiper-slide page__gallery-area">
+							<section class="main-gallery">
+								<div class="main-gallery__slider swiper">
+									<div class="main-gallery__prev-btn swiper-btn swiper-btn_prev">
+										<svg viewbox="0 0 22 17">
+											<use xlink:href='img/icons/icons.svg#nav-arrow-left'></use>
+										</svg>
+									</div>
+									<div class="main-gallery__next-btn swiper-btn swiper-btn_next">
+										<svg viewbox="0 0 22 17">
+											<use xlink:href='img/icons/icons.svg#nav-arrow-left'></use>
+										</svg>
+									</div>
+									<div class="swiper-wrapper">
+										<div class="swiper-slide main-gallery__slide">
+											<img src="img/cart/001.jpg" alt="cart/001.jpg" loading="lazy">
+											<div class="swiper-lazy-preloader"></div>
+										</div>
+									</div>
+									<div class="main-gallery__paggination"></div>
+								</div>
+							</section>
+							<div class="order-confirmation__order-summary-outside order-confirmation-summary" data-portal-dest="order-summary"></div>
+						</div>
+					</div>
+				</section>
+			</main>
+		</div>
+		<footer class="footer footer_left">
+			<div class="footer__container">
+				<figure class="footer__logo logo">
+					<a href="/"><img src="img/logo.svg" alt="Logo"></a>
+				</figure>
+				<div class="footer__main-menu-area" data-portal-src="main-menu" data-portal-media="(max-width: 720px)">
+					<div class="footer__main-menu main-menu">
+						<button type="button" class="main-menu__btn menu-btn">
+							<span>
+								<span></span>
+								<span></span>
+								<span></span>
+							</span>
+							<span>MENU</span>
+						</button>
+						<div class="main-menu__nav-underlay">
+							<div class="main-menu__nav-wrap">
+								<div class="main-menu__nav-panel">
+									<div class="main-menu__nav-panel-inner">
+										<nav class="main-menu__nav">
+											<ul>
+												<li><a href="/" class="">MAIN PAGE</a></li>
+												<li><a href="/projects.html" class="">PROJECTS</a></li>
+												<li><a href="/store.html" class="">ONLINE STORE</a></li>
+												<li><a href="/collections.html" class="">COLLECTIONS</a></li>
+												<!-- <li><a href="#" class="">SHAPES</a></li> -->
+												<li><a href="/catalogue.html" class="">CATALOGY</a></li>
+												<li><a href="/planters-to-order.html" class="">planters to order</a></li>
+											</ul>
+											<div class="main-menu__add-nav-area" data-portal-dest="add-nav"></div>
+										</nav>
+										<div class="main-menu__lang-select-area" data-portal-dest="lang-select"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="footer__group">
+					<nav class="footer__add-nav" data-portal-src="add-nav" data-portal-media="(max-width: 720px), (min-width: 992px) and (max-width: 1120px)">
+						<ul>
+							<li><a href="/where-to-buy.html" class="">WHERE TO BUY?</a></li>
+							<li><a href="/contacts.html" class="">CONTACTS</a></li>
+						</ul>
+					</nav>
+					<div class="footer__lang-select-area" data-portal-src="lang-select" data-portal-media="(max-width: 720px)">
+						<select name="lang" id="lang-select" data-simple-select>
+							<option value="en" data-caption-value="ENG">English</option>
+							<option value="es" data-caption-value="SPA">Español</option>
+							<option value="de" data-caption-value="DEU">Deutsch</option>
+							<option value="it" data-caption-value="ITA">Italiano</option>
+						</select>
+					</div>
+					<div class="footer__contacts-btn-area" data-portal-src="contacts-btn" data-portal-media="(max-width: 720px)">
+						<button type="button" class="footer__contacts-btn contacts-btn" data-drawer-open="contact-form">
+							<svg viewbox="0 0 21 21">
+								<use xlink:href='img/icons/icons.svg#contacts'></use>
+							</svg>
+						</button>
+					</div>
+					<div class="footer__cart-area" data-portal-src="shop-cart" data-portal-media="(max-width: 720px)">
+						<button type="button" class="footer__cart cart">
+							<svg viewbox="0 0 32 28">
+								<use xlink:href='img/icons/icons.svg#cart'></use>
+							</svg>
+							<div>1</div>
+						</button>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<section class="drawers">
+		<div class="drawer drawer_overlapping drawer_modal" data-drawer="contact-form" data-scrollable>
+			<div class="drawer__panel">
+				<div class="drawer__inner contact-form-drawer__inner">
+					<div class="drawer__header">
+						<div class="drawer__header-inner">
+							<h2 class="drawer__title contact-form-drawer__title">Order a feedback</h2>
+							<button type="button" class="contact-form-drawer__close-btn drawer__close-btn" data-drawer-close="contact-form"></button>
+						</div>
+					</div>
+					<div class="drawer__body">
+						<form name="feedback-order" class="form" novalidate>
+							<div class="form__row form-msg mb-50">
+								Please leave your name, number and a message and someone will call you back.
+							</div>
+							<div class="form__row form__row_grid-2c mb-30">
+								<div class="form__field field" data-name="country">
+									<label class="field__label">
+										country*
+									</label>
+									<select name="country" id="drawer-country-select" class="field__input" data-class="field__v-input w-100p" data-placeholder="Choose your counry">
+										<option value="ae">ОАЭ</option>
+										<option value="it">Италия</option>
+										<option value="de">Германия</option>
+									</select>
+									<span class="field__error" data-alias="required">Choose your counry</span>
+								</div>
+								<div class="form__field field">
+									<label class="field__label">
+										Name*
+									</label>
+									<input type="text" name="name" class="field__input form-input" placeholder="Enter your name"></input>
+									<span class="field__error" data-alias="required">Введите имя</span>
+								</div>
+							</div>
+							<div class="form__row form__row_grid-2c mb-30">
+								<div class="form__field field">
+									<label class="field__label">
+										phone*
+									</label>
+									<input required type="tel" name="phone" class="field__input form-input" placeholder="Enter the number"></input>
+									<span class="field__error" data-alias="required">Введите номер</span>
+									<span class="field__error" data-alias="matches" data-method="matches" data-pattern="">Некорректные данные</span>
+								</div>
+								<div class="form__field field" data-name="email">
+									<label class="field__label">
+										E-mail*
+									</label>
+									<input required type="email" name="email" class="field__input form-input" placeholder="Enter an e-mail"></input>
+									<span class="field__error" data-alias="required">Введите e-mail</span>
+									<span class="field__error" data-alias="email">Некорректные данные</span>
+								</div>
+							</div>
+							<div class="form__row mb-15">
+								<div class="form__field field">
+									<label class="field__label">
+										Message
+									</label>
+									<textarea name="message" class="field__input form-input form-input_textarea" placeholder="Write your message"></textarea>
+								</div>
+							</div>
+							<div class="form__row mb-50">
+								<div class="form__field field">
+									<label class="input-checkbox">
+										<input type="checkbox" name="agreement-accepted" class="field__input input-checkbox__input" checked>
+										<span class="input-checkbox__body">
+											<svg class="input-checkbox__icon" viewbox="0 0 8 4">
+												<use xlink:href='img/icons/icons.svg#checkbox-arrow'></use>
+											</svg>
+										</span>
+										<span class="input-checkbox__label form-input-label">I accept the terms of the user agreement</span>
+									</label>
+									<span class="field__error" data-alias="checked">Нужно принять соглашение</span>
+								</div>
+							</div>
+							<div class="form__row mb-30">
+								<button type="submit" class="btn btn_black w-100p">
+									Send
+								</button>
+							</div>
+							<dl class="feedback-phone">
+								<dt>You can also contact us by phone:</dt>
+								<dd><a href="tel:+9 999 99-99" class="hoverable hoverable_underline-in">+9 999 99-99</a></dd>
+							</dl>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="drawer drawer_overlapping drawer_modal" data-drawer="contact-request-confirm" data-scrollable>
+			<div class="drawer__panel">
+				<div class="drawer__inner contact-form-drawer__inner">
+					<div class="drawer__header">
+						<div class="drawer__header-inner">
+							<h2 class="drawer__title contact-form-drawer__title">Thank you for<br>contacting us!</h2>
+							<button type="button" class="contact-form-drawer__close-btn drawer__close-btn" data-drawer-close="contact-request-confirm"></button>
+						</div>
+					</div>
+					<div class="drawer__body">
+						<div class="form-msg">
+							Our managers will contact you in the near future.
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="drawer drawer_overlapping drawer_modal drawer_narrow" data-drawer="order-confirm" data-scrollable>
+			<div class="drawer__panel">
+				<div class="drawer__inner">
+					<div class="drawer__header">
+						<div class="drawer__header-inner">
+							<h2 class="drawer__title">Спасибо за заказ!</h2>
+							<button type="button" class="drawer__close-btn" data-drawer-close="order-confirm"></button>
+						</div>
+					</div>
+					<div class="drawer__body">
+						<div class="form-msg">
+							В ближайшее время наши менеджеры свяжутся с Вами для уточнения параметров заказа и вопросов доставки.
+							По всем вопросам вы можете обратиться в отдел продаж по тел. <a href="tel:+79150305544" class="hoverable">+7 915 030-55-44</a>.
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<script src="libs/tua-bsl.umd.js?_v=20230601122951"></script>
+	<script src="js/common.min.js?_v=20230601122951"></script>
+	<script src="js/order-confirmation.min.js?_v=20230601122951"></script>
+</body>
+
+</html>

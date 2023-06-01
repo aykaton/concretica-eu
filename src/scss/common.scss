@@ -450,3 +450,20 @@
 		line-height: rem(21);
 	}
 }
+.loading-spinner {
+	width: rem(68);
+	height: rem(68);
+	font-size: 0;
+	border: rem(8) solid rgba($color: $--orange, $alpha: 0.8);
+	border-bottom-color: transparent;
+	border-radius: 50%;
+	animation: spin 0.5s linear 0s infinite;
+}
+@keyframes spin {
+	from {
+		transform: rotateZ(0deg);
+	}
+	to {
+		transform: rotateZ(360deg);
+	}
+}
